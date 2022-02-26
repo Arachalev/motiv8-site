@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.main
+{
+    @apply flex flex-row
+}
+.landing 
+{
+    @apply w-1/2 mx-16
+}
+.landing h4
+{
+    @apply text-5xl font-bold py-5 text-motiv8 capitalize
+    
+}
+
+.landing p{
+    @apply text-gray-700 text-xl  
+}
+
+.polygon
+{
+    @apply relative 
+}
+ 
+/* .p1
+{
+    @apply lg:absolute lg:-left-14
+} */
+.p2
+{
+    @apply absolute lg:left-36 lg:top-40 xl:left-60 xl:top-14  
+}
+
+.p3
+{
+    @apply absolute   -bottom-60 left-24 
+}

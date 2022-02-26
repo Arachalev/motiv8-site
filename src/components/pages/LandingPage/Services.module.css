@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.className {
+  @apply w-52 p-6   mx-4 text-left shadow-sm border  rounded-3xl justify-center;
+}
+
+.link {
+  @apply w-fit  py-2  mx-0  text-motiv8 backdrop-blur-lg     my-7 rounded-2xl;
+}
+
+.span{
+    @apply text-4xl  py-4 w-fit
+    
+}
+.services{
+    @apply flex flex-row flex-auto  mt-48
+}
+
+.future
+{
+    @apply w-1/2 pl-12 py-12 text-left mt-16
+}
+.future h4
+{
+    @apply text-5xl my-8 font-bold
+}
+.future p
+{
+    @apply text-xl text-gray-600 my-8
+}
+
+.future button
+{
+    @apply px-4 py-2 bg-motiv8 rounded-2xl text-white
+}
+
+
+.container
+{
+    @apply flex flex-wrap flex-row gap-4   py-6 w-fit justify-center
+}

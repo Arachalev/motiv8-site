@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.icon
+{
+    @apply text-5xl pl-20 mb-2
+}
+
+ 
+.text h4{
+    @apply text-2xl font-bold capitalize 
+}
+
+.text p 
+{
+    @apply text-xl 
+}
+
+.svg {
+    filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
+     @apply px-8
+  }
+
+
+  .foreignObject
+  {
+    @apply flex    w-64 text-center
+      
+  }

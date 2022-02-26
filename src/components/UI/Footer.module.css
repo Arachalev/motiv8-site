@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
+.footer
+{
+    @apply px-32 
+
+}
+.container
+{
+    @apply flex flex-row mt-48  gap-32 justify-center
+}
+.intro
+{
+    @apply w-72
+}
+.logo
+ {
+     @apply h-8 w-20 
+ }
+ .head{
+     @apply flex flex-row mb-8
+ }
+
+ .head p {
+     @apply text-xl font-bold inline
+ }
+ .text{
+     @apply text-gray-600 
+ }
+
+ .social
+ {
+     @apply flex flex-row gap-4 mt-8
+ }
+ .social span
+ {
+     @apply p-2 bg-black text-white rounded-lg
+ }
+
+ .footerTab
+ {
+     @apply flex flex-row gap-24
+ }
+
+ .copyright
+ {
+     @apply flex flex-row justify-between my-8
+ }
+ .copyright p
+ {
+     @apply text-gray-600 font-semibold
+ }
+ hr
+ {
+     @apply w-full my-8
+ }

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card
+{
+    @apply w-96 p-8 text-left  rounded-xl shadow-2xl 
+}
+.card p
+{
+    @apply text-gray-600 
+}
+
+.images
+{
+    @apply rounded-full   w-16 h-16 overflow-hidden
+}
+.quote
+{
+    @apply text-4xl text-gray-600
+}
+
+.icon{
+    @apply w-40
+}
+
+.details
+{
+    @apply flex flex-row gap-8 pt-8
+}
+
+.title
+{
+    @apply text-gray-600 text-base
+}

@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+header{
+    @apply py-4 px-16   w-full
+}
+
+.svgContainer
+{
+    @apply -z-50  opacity-80 absolute top-0 left-0  
+}
+
+.svg
+{
+    @apply   z-20 opacity-30  absolute -top-0 left-0  
+}
+.svg1
+{
+    @apply    opacity-10 absolute top-0 left-0  m-0 p-0
+}
+.color
+{
+    background: #48a4c998;
+}
+
+
+ .logo
+ {
+     @apply h-32 w-32
+ }
+
+
+.links ul
+{
+    @apply flex gap-6
+}
+
+
+#contact 
+{
+    @apply text-white bg-blue-700 rounded-full 
+}
+
+.links li
+{
+    @apply  list-none px-6 py-3  text-gray-600 
+}
+
+header
+{
+    @apply flex justify-between 
+}

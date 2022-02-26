@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pricing
+{
+    @apply w-80 p-8 border rounded-2xl shadow-xl ml-16
+}
+.main
+{
+    @apply flex gap-3 flex-col   items-center my-4
+}
+.title
+{
+    @apply text-2xl font-bold
+}
+ .pricingContainer{
+     @apply flex flex-row items-baseline 
+ }
+.price
+{
+    @apply text-4xl font-bold 
+}
+.time
+{
+    @apply text-gray-600 capitalize     
+}
+.perks
+{
+    @apply flex flex-col gap-6 
+}
+.perksContainer
+{
+    @apply flex flex-row items-baseline gap-3
+}
+.icon
+{
+    @apply text-green-600
+}
+.perksButton
+{
+    @apply  mx-auto px-4 py-2 bg-gray-400 text-gray-700 rounded-2xl block my-4 
+}
+
+.plan
+{
+    @apply text-center mx-auto px-16 py-2 bg-motiv8 text-white rounded-xl block
+}
+

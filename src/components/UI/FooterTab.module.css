@@ -1,0 +1,9 @@
+
+
+.head{
+    @apply text-xl font-bold mb-8 capitalize
+}
+li
+{
+    @apply text-gray-600 text-sm py-1 font-semibold capitalize
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.pricing
+{
+    
+    @apply flex flex-col gap-8 text-center my-32 mt-48
+}
+.pricing p
+{
+    @apply text-gray-700 
+    
+}
+
+.pricing h4
+{
+    @apply text-5xl font-bold capitalize  w-2/4 text-center mx-auto
+}
+
+.singlePrice
+{
+    @apply flex flex-row flex-wrap gap-4 justify-center
+}
+
+

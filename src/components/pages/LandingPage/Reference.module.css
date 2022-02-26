@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind components;
+
+
+.reference
+{
+    @apply p-20  text-center 
+
+}
+
+.reference p 
+{
+    @apply text-gray-600  text-3xl
+}
+
+.reference span{
+    @apply text-gray-900 font-bold
+}
+
+.icons
+{
+    @apply flex flex-row gap-8 justify-center my-8
+}
+
+.icons span
+{
+    @apply text-gray-600 text-5xl
+}

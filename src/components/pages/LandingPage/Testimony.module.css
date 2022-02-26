@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.testimony
+{
+    @apply mt-48  
+}
+
+.intro{
+    @apply text-center
+}
+.intro h4
+{
+    @apply text-5xl text-black font-bold capitalize tracking-wider  my-8
+}
+.intro p
+{
+    @apply text-gray-600 
+} 
+.testimonies
+{
+    @apply mt-16 flex flex-row justify-center gap-8    p-8
+}

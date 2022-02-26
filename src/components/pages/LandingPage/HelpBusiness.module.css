@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.help
+{
+    @apply text-center flex flex-col w-1/2 m-auto
+}
+.help h4 {
+    @apply font-bold text-5xl  
+
+}
+
+.help p
+{
+    @apply text-gray-600 py-5
+}
+.card
+{
+    @apply m-8 flex flex-row gap-4    w-fit justify-center
+}
+
+.className
+{
+    @apply w-3/12 p-10 mx-4 text-center shadow-xl   rounded-3xl
+}
+.span{
+    @apply text-4xl m-auto py-4
+    
+}

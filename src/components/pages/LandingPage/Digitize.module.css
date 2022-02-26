@@ -1,0 +1,87 @@
+/* fffcs3 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section{
+    background-color: #137297;
+    /* 13719698 */
+}
+.section
+{
+    @apply bg-digi  drop-shadow-digi   mt-40
+}
+
+.digitize
+{
+    @apply flex flex-row w-full h-digi p-12
+}
+
+.client
+{
+    @apply w-1/2 
+    
+}
+ 
+
+.client h4
+{
+    @apply text-black capitalize text-4xl font-bold mb-10
+}
+
+.image
+{
+    @apply w-5/6 h-4/5 rounded-3xl overflow-hidden 
+}
+
+.image img
+{
+    @apply object-cover w-full h-full
+}
+
+
+.standard
+{
+    @apply w-1/2 mt-36 
+}
+.standard h4
+{
+    @apply text-xl font-semibold
+}
+
+.services{
+    @apply mt-20
+}
+.services p 
+{ 
+    @apply text-gray-600
+}
+.services span
+{
+    @apply text-gray-800 font-semibold flex flex-row gap-4 my-4
+}
+
+.stats
+{
+    @apply flex flex-row  gap-4 p-8  absolute bottom-12 right-96 bg-motiv8 rounded-2xl
+}
+
+.stats div
+{
+    @apply h-fit 
+}
+.stats hr
+{
+    @apply w-px h-14 bg-black p-px border-none m-0
+}
+
+.stats p
+{
+    @apply font-semibold text-2xl 
+}
+
+.stats span
+{
+    @apply capitalize text-base
+}
