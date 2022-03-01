@@ -65,7 +65,7 @@ const Footer = () => {
       <hr/>
       <div className={classes.copyright}>
       <p>Copyright &copy; {date.getFullYear()} </p>
-      <p>Designed by Ekong</p>
+      <p>Designed by Motiv8</p>
 
       </div>
       

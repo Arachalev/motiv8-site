@@ -1,11 +1,32 @@
 import classes from "./Header.module.css";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Logo from "../../assets/images/motiv8-logo.png";
+
 // import TopSvg from '../../assets/images/Vector2.svg'
 import { Link } from "react-router-dom";
 import HeaderVector from "../../assets/images/HeaderVector.js";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+
 
 const Header = (props) => {
+  const [isModal, setIsModal] = useState(false);
+   const navLinks = "hidden  flex items-end gap-3 flex-col md:flex md:block md:flex-row   lg:gap-6   transition ease-in"
+  //  let contentClassname = isModal
+  //  ? ` ${navLinks}  `
+  //  : `${hiddenLinks} ${navLinks}`;
+  let contentClassname = isModal ? `${classes.hiddenLinks}` : ` ${classes.navLinks}`;
+
+  const burgerHandler = (e)=>
+  {
+    e.preventDefault();
+    setIsModal(!isModal)
+
+  }
+
+
+
+
   return (
     <Fragment>
       <header >
@@ -46,7 +67,9 @@ const Header = (props) => {
           </div>
         </div>
         <div className={classes.links}>
-          <ul>
+          <div  className={classes.hamburger}><GiHamburgerMenu id="burger" onClick={burgerHandler} className="m-0 inline" /></div>
+           
+          <ul id="menu" className={contentClassname}>
             <li>
               <Link to="/about-us">About Us</Link>
             </li>
