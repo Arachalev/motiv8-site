@@ -14,20 +14,20 @@ const LandingPage = (props) => {
   return (
     <div >
       <div className={classes.landing}>
-        {/* <Header /> */}
+        <Header />
         <MainSection />
       </div>
-      {/* <div>
-        <Reference/>
+      <div>
+        {/* <Reference/>
       <HelpBusiness/>
       <Digitize/>
       <Services/>
       <Testimony/>
       <Pricing/>
-      <Footer/>
+      <Footer/> */}
 
 
-      </div> */}
+      </div>
 
     </div>
   );

@@ -1,6 +1,8 @@
-import Polygon from "../../UI/Polygon";
+// import Polygon from "../../UI/Polygon";
 import classes from "./MainSection.module.css";
+import { Link } from "react-router-dom";
 import { AiFillAlipayCircle } from "react-icons/ai";
+import landingLogo from '../../../assets/images/undraw_connection_re_lcud.svg'
 
 
 const MainSection = () => {
@@ -13,9 +15,17 @@ const MainSection = () => {
           step using our collaborative engineer-driven team that will get you
           there.
         </p>
+
+         <div className={classes.ctaBtn}>
+           <button>
+             <Link to={`#`}>Get in touch with us</Link>
+             
+           </button>
+
+         </div>
       </div>
       <div className={classes.polygon}>
-        <span className={classes.p1}>
+        {/* <span className={classes.p1}>
           <Polygon
             head={`this is the name`}
             text={`Hello my friend`}
@@ -35,7 +45,11 @@ const MainSection = () => {
             text={`Hello my friend`}
             icon={<AiFillAlipayCircle />}
           />
-        </span>
+        </span> */}
+      </div>
+      <div className={classes.landingLogo}>
+        <img src={landingLogo}/>
+
       </div>
     </section>
   );
