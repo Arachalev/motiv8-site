@@ -1,5 +1,4 @@
 import classes from "./LandingPage.module.css";
-import Header from "../../UI/Header";
 import { Fragment } from "react";
 import MainSection from "./MainSection";
 import HelpBusiness from "./HelpBusiness";
@@ -8,13 +7,11 @@ import Digitize from "./Digitize";
 import Services from "./Services";
 import Testimony from "./Testimony";
 import Pricing from "./Pricing";
-import Footer from "../../UI/Footer";
 
 const LandingPage = (props) => {
   return (
     <div >
       <div className={classes.landing}>
-        <Header />
         <MainSection />
       </div>
       <div>
@@ -24,7 +21,6 @@ const LandingPage = (props) => {
       <Services/>
       <Testimony/>
       <Pricing/>
-      <Footer/>
 
 
       </div>

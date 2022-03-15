@@ -34,7 +34,6 @@ const Testimony = () => {
     }
     testimony[slideIndex - 1].classList.remove("hidden");
     testimony[slideIndex - 2].classList.remove("hidden");
-
   };
 
   const plusSlides = () => {
@@ -45,47 +44,7 @@ const Testimony = () => {
   };
 
   useEffect(() => {
-    // let home, slideIndex;
-    // slideIndex = 1;
-    let home = document.getElementsByClassName("home");
-    console.log(home.length);
-    // home[0].className += " hidden"
-
     slideShow(slideIndex);
-
-    // function showSlides(){
-
-    // let home = document.getElementsByClassName("home");
-
-    // let dots = document.getElementsByClassName("dot");
-    // if (n > slides.length) {slideIndex = 1}
-    // if (n < 1) {slideIndex = slides.length}
-    // console.log(`n = ${n}`)
-    // console.log(`slideindex = ${slideIndex}`)
-
-    // for (let i = 0; i < slides.length; i++) {
-    // slides[i].style.display = "none";
-    // }
-    // for (let i = 0; i < dots.length; i++) {
-    // dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    // slides[slideIndex-1].style.display = "block";
-    // home[slideIndex-1].style.display = "none".
-    // }
-
-    // showSlides()
-
-    //   showSlides(slideIndex);
-
-    //   // Next/previous controls
-    //   function plusSlides(n) {
-    //     showSlides(slideIndex += n);
-    //   }
-
-    //   // Thumbnail image controls
-    //   function currentSlide(n) {
-    //     showSlides(slideIndex = n);
-    //   }
   }, [slideShow]);
 
   return (
@@ -135,7 +94,6 @@ const Testimony = () => {
         <GrPrevious onClick={prevSlides} />
         <GrNext onClick={plusSlides} />
       </div>
-       
     </div>
   );
 };

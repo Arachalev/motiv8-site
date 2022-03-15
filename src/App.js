@@ -1,13 +1,20 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import LandingPage from './components/pages/LandingPage/LandingPage';
+import { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/UI/Header';
+import Footer from './components/UI/Footer';
+
 
 function App() {
   return (
-      <Routes>
-        <Route path='/' element ={<LandingPage/>} />
+    <Fragment>
+      <Header/>
+      <Outlet/>
 
-      </Routes>
+      <Footer/>
+
+    </Fragment>
+       
   );
 }
 

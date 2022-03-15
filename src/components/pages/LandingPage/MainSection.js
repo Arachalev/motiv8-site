@@ -18,7 +18,7 @@ const MainSection = () => {
 
          <div className={classes.ctaBtn}>
            <button>
-             <Link to={`#`}>Get in touch with us</Link>
+             <Link to={`contact_us`}>Get in touch with us</Link>
              
            </button>
 

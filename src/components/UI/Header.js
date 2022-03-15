@@ -1,4 +1,5 @@
 import classes from "./Header.module.css";
+import { useNavigate } from "react-router-dom";
 import { Fragment, useState } from "react";
 import Logo from "../../assets/images/motiv8-logo.png";
 
@@ -9,23 +10,26 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = (props) => {
   const [isModal, setIsModal] = useState(false);
-  
-  let menu = "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
+  let navigate = useNavigate()
+
+  const contactUs = ()=>{
+    navigate("/motiv8/contact_us")
+  }
+
+  let menu =
+    "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
   const styleArray = menu.split(" ");
 
-  if (isModal) {    
+  if (isModal) {
     menu = menu;
-  } 
+  }
   // else if (styleArray[0] === "hidden") {
   //   return;
   // }
-  
   else {
     styleArray.splice(0, 0, "hidden");
     menu = styleArray.join(" ");
   }
- 
-   
 
   const burgerHandler = (e) => {
     e.preventDefault();
@@ -52,9 +56,10 @@ const Header = (props) => {
 </svg> */}
 
         <div>
-          <div className={classes.logo}>
+          <Link to="/motiv8/home " > <div className={classes.logo}>
             <img alt="logo" src={Logo} />
-          </div>
+          </div> </Link>
+          
         </div>
         <div className={classes.links}>
           <div className={classes.hamburger}>
@@ -67,19 +72,19 @@ const Header = (props) => {
 
           <ul id="menu" className={menu}>
             <li>
-              <Link to="/about-us">About Us</Link>
+              <Link to="about_us">About Us</Link>
             </li>
             <li>
-              <Link to="our-services">Our Service</Link>
+              <Link to="our_services">Our Service</Link>
             </li>
             <li>
-              <Link to="the-team">The Team</Link>
+              <Link to="the_team">The Team</Link>
             </li>
             <li>
               <Link to="portfolio">Portfolio</Link>
             </li>
             <li className={classes.contact} id={classes.contact}>
-              <Link to="contact-us">Get In Touch</Link>
+              <button onClick={contactUs}>Get In Touch</button>
             </li>
           </ul>
         </div>
