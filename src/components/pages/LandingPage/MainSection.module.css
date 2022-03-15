@@ -8,16 +8,16 @@
 }
 .landing 
 {
-    @apply w-1/2 mx-16
+    @apply  w-2/3  md:w-1/2  md:text-left  mx-16
 }
 .landing h4
 {
-    @apply text-3xl md:text-5xl font-bold py-5 text-motiv8 capitalize
+    @apply   text-3xl md:text-4xl lg:text-5xl font-bold py-5 text-motiv8 capitalize
     
 }
 
 .landing p{
-    @apply text-base text-gray-700 md:text-xl  
+    @apply text-base w-72 text-gray-700 md:text-lg lg:text-xl  
 }
 
 .landingCta
@@ -26,12 +26,12 @@
 }
 .ctaBtn button
 {
-    @apply bg-motiv8 text-white text-lg  px-4 py-2 rounded-xl  mt-24 hover:scale-110 transition ease-in
+    @apply bg-motiv8 text-white text-lg  px-4 py-2 rounded-xl mt-16  md:mt-24 hover:scale-110 transition ease-in
 }
 
 .landingLogo
 {
-    @apply hidden sm:inline
+    @apply hidden md:inline md:w-1/2
 }
 
  

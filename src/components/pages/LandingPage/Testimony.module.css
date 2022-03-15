@@ -5,7 +5,7 @@
 
 .testimony
 {
-    @apply mt-48  
+    @apply mt-48    
 }
 
 .intro{
@@ -13,7 +13,7 @@
 }
 .intro h4
 {
-    @apply text-5xl text-black font-bold capitalize tracking-wider  my-8
+    @apply text-black font-bold capitalize tracking-wider  my-5 text-3xl md:text-4xl lg:text-5xl md:my-8
 }
 .intro p
 {
@@ -21,5 +21,5 @@
 } 
 .testimonies
 {
-    @apply mt-16 flex flex-row justify-center gap-8    p-8
+    @apply mt-16 flex flex-row justify-center gap-8  p-8 
 }

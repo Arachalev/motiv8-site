@@ -5,12 +5,12 @@
 
 .footer
 {
-    @apply px-32 
+    @apply px-6 lg:px-12 lg:px-32 w-full  
 
 }
 .container
 {
-    @apply flex flex-row mt-48  gap-32 justify-center
+    @apply min-w-full flex flex-col mt-32 lg:mt-48 md:flex-row  gap-24 lg:gap-32 items-center md:justify-between 
 }
 .intro
 {
@@ -42,7 +42,7 @@
 
  .footerTab
  {
-     @apply flex flex-row gap-24
+     @apply flex flex-col md:flex-row sm:gap-12 md:gap-4 lg:gap-8   xl:gap-14 
  }
 
  .copyright

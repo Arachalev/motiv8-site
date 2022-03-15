@@ -10,11 +10,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Header = (props) => {
   const [isModal, setIsModal] = useState(false);
   
-  let menu = "absolute top-14 right-8  flex items-end gap-3 flex-col md:relative md:top-0 md:right-0 md:flex md:block md:flex-row lg:gap-6 transition ease-in";
+  let menu = "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
   const styleArray = menu.split(" ");
 
   if (isModal) {    
-    menu = "absolute top-14 right-8  flex items-end gap-3 flex-col md:relative md:top-0 md:right-0 md:flex md:block md:flex-row   lg:gap-6 transition ease-in";
+    menu = menu;
   } 
   // else if (styleArray[0] === "hidden") {
   //   return;

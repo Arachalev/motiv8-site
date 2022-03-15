@@ -10,18 +10,18 @@ header{
 
 .svgContainer
 {
-    @apply -z-50  opacity-80 absolute top-0 left-0  
+    @apply -z-50  opacity-80 absolute top-0 left-0 animate-pulse animate-ping transition-all ease-in-out
 }
 
  
 
 .svg
 {
-    @apply   z-20 opacity-30  absolute -top-0 left-0  
+    @apply   z-20 opacity-30  absolute -top-0 left-0  animate-pulse
 }
 .svg1
 {
-    @apply    opacity-10 absolute top-0 left-0  m-0 p-0
+    @apply    opacity-10 absolute top-0 left-0  m-0 p-0 animate-pulse
 }
 .color
 {
@@ -36,14 +36,7 @@ header{
 
 
 
-/* .hiddenLinks
-{
-    @apply     flex items-end gap-3 flex-col md:flex md:block md:flex-row   lg:gap-6   transition ease-in
-}
-.navLinks
-{
-    @apply hidden flex items-end gap-3 flex-col md:flex md:block md:flex-row   lg:gap-6   transition ease-in
-} */
+ 
 
 .hamburger
 {

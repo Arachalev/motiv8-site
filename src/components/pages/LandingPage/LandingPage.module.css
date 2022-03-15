@@ -6,5 +6,5 @@
 
  .landing
  {
-     @apply pb-80
+     @apply pb-20 md:pb-32
  }

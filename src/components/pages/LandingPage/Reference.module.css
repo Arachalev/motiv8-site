@@ -5,13 +5,13 @@
 
 .reference
 {
-    @apply p-20  text-center 
+    @apply  px-20 pb-10  text-center 
 
 }
 
 .reference p 
 {
-    @apply text-gray-600  text-3xl
+    @apply text-gray-600 text-2xl  md:text-3xl
 }
 
 .reference span{
@@ -25,5 +25,5 @@
 
 .icons span
 {
-    @apply text-gray-600 text-5xl
+    @apply text-gray-600 text-3xl md:text-5xl
 }

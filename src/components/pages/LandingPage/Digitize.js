@@ -28,19 +28,19 @@ const Digitize = () => {
             <div className={classes.services}>
               <span>
                 <GiCheckMark />
-                <p>Quality services and support all times</p>{" "}
+                <p>Quality services and support all times</p>
               </span>
               <span>
                 <GiCheckMark />
-                <p>Expert Team Members</p>{" "}
+                <p>Expert Team Members</p>
               </span>
               <span>
                 <GiCheckMark />
-                <p>Lifetime online support</p>{" "}
+                <p>Lifetime online support</p>
               </span>
               <span>
                 <GiCheckMark />
-                <p>Dedicated business advisor</p>{" "}
+                <p>Dedicated business advisor</p>
               </span>
             </div>
           </div>

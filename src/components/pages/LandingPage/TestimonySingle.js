@@ -2,8 +2,10 @@ import classes from "./TestimonySingle.module.css";
 import { RiDoubleQuotesR } from "react-icons/ri";
 
 const TestimonySingle = (props) => {
+  // let home = document.getElementsByClassName("home");
+  // console.log(home.length)
   return (
-    <div className={classes.card}>
+    <div className={`${classes.card} home  `}>
       <img className={classes.icon} src={props.icon} />
       <p>{props.text}</p>
 

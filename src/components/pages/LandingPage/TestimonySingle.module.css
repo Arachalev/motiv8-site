@@ -5,7 +5,7 @@
 
 .card
 {
-    @apply w-96 p-8 text-left  rounded-xl shadow-2xl 
+    @apply w-72  p-6 lg:p-8 text-left  rounded-xl shadow-2xl lg:w-80 animate-fade
 }
 .card p
 {
@@ -14,20 +14,20 @@
 
 .images
 {
-    @apply rounded-full   w-16 h-16 overflow-hidden
+    @apply rounded-full  w-10 h-10 md:w-16 md:h-16 overflow-hidden
 }
 .quote
 {
-    @apply text-4xl text-gray-600
+    @apply text-3xl lg:text-4xl text-gray-600
 }
 
 .icon{
-    @apply w-40
+    @apply w-20 md:w-32 lg:w-40
 }
 
 .details
 {
-    @apply flex flex-row gap-8 pt-8
+    @apply flex flex-row gap-4 md:gap-6 lg:gap-8 pt-8
 }
 
 .title

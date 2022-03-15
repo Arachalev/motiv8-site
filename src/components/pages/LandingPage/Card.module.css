@@ -10,12 +10,12 @@
 
 .head
 {
-    @apply font-semibold text-2xl my-3 w-fit
+    @apply font-semibold text-lg md:text-2xl my-3 w-fit
 }
 
 .text
 {
-    @apply text-gray-600 text-base w-fit
+    @apply text-gray-600  text-sm w-fit md:text-lg lg:text-xl
 }
 
  .childClass

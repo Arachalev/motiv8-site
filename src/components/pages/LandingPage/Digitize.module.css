@@ -27,7 +27,7 @@
 
 .client h4
 {
-    @apply text-black capitalize text-4xl font-bold mb-10
+    @apply text-black capitalize text-2xl lg:text-4xl font-bold mb-10
 }
 
 .image
@@ -47,7 +47,7 @@
 }
 .standard h4
 {
-    @apply text-xl font-semibold
+    @apply text-lg md:text-xl font-semibold
 }
 
 .services{
@@ -55,7 +55,7 @@
 }
 .services p 
 { 
-    @apply text-gray-600
+    @apply text-gray-600 text-sm md:text-base
 }
 .services span
 {
@@ -64,7 +64,7 @@
 
 .stats
 {
-    @apply flex flex-row  gap-4 p-8  absolute bottom-12 right-96 bg-motiv8 rounded-2xl
+    @apply flex flex-row gap-2 p-4  absolute left-56 bottom-12  bg-motiv8 rounded-2xl md:gap-4 md:p-8  md:left-56 md:bottom-20 lg:left-96 
 }
 
 .stats div
@@ -78,10 +78,10 @@
 
 .stats p
 {
-    @apply font-semibold text-2xl 
+    @apply font-semibold text-xl md:text-2xl 
 }
 
 .stats span
 {
-    @apply capitalize text-base
+    @apply capitalize text-sm md:text-base
 }

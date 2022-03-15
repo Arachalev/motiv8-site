@@ -18,13 +18,13 @@ const LandingPage = (props) => {
         <MainSection />
       </div>
       <div>
-        {/* <Reference/>
+        <Reference/>
       <HelpBusiness/>
       <Digitize/>
       <Services/>
       <Testimony/>
       <Pricing/>
-      <Footer/> */}
+      <Footer/>
 
 
       </div>
