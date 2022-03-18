@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.intro
+{
+    @apply text-center mb-12
+}
+.intro h4
+{
+    @apply text-3xl font-bold mb-4
+}
+
+.intro p
+{
+    @apply text-gray-500 text-lg 
+}
+
+.mates
+{
+    @apply grid grid-cols-3  gap-x-8 gap-y-12 justify-items-center w-fit mx-auto 
+}

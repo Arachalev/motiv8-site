@@ -1,11 +1,16 @@
 // import Polygon from "../../UI/Polygon";
 import classes from "./MainSection.module.css";
-import { Link } from "react-router-dom";
-import { AiFillAlipayCircle } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+// import { AiFillAlipayCircle } from "react-icons/ai";
 import landingLogo from '../../../assets/images/undraw_connection_re_lcud.svg'
 
 
 const MainSection = () => {
+  const navigate = useNavigate()
+
+  const toContactUs = ()=>{
+    navigate("/motiv8/contact_us")
+  }
   return (
     <section className={classes.main}>
       <div className={classes.landing}>
@@ -17,8 +22,8 @@ const MainSection = () => {
         </p>
 
          <div className={classes.ctaBtn}>
-           <button>
-             <Link to={`contact_us`}>Get in touch with us</Link>
+           <button onClick={toContactUs}>
+              Get in touch with us 
              
            </button>
 
@@ -48,7 +53,7 @@ const MainSection = () => {
         </span> */}
       </div>
       <div className={classes.landingLogo}>
-        <img src={landingLogo}/>
+        <img src={landingLogo} alt='logo'/>
 
       </div>
     </section>

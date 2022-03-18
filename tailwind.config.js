@@ -1,3 +1,5 @@
+// const bg = 12;
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -38,7 +40,8 @@ module.exports = {
                 '50%':{opacity: '.7'},
                 '100%':{opacity : '1'}
 
-              }}
+              }},
+        
           
           
       

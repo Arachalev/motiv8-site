@@ -1,9 +1,13 @@
 import classes from "./Services.module.css";
 import Card from "./Card";
 import { SiAdobexd } from "react-icons/si";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {
+  let navigate = useNavigate();
+  const toServices = ()=>{
+    navigate("/motiv8/our_services")
+  }
   return (
     <div className={classes.services}>
       <div className={classes.future}>
@@ -11,7 +15,7 @@ const Services = () => {
         <p>
           Discuss your goals, determine your success metrics, identity problems
         </p>
-        <button>Get started</button>
+        <button onClick={toServices}>Get started</button>
       </div>
       <div className={classes.container}>
         <Card

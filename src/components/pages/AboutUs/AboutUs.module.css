@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mission
+{
+    @apply  mx-72 mt-32
+}
+.mission h2
+{
+    @apply text-5xl text-blue-800 font-bold 
+}
+
+.mission p
+{
+    @apply text-blue-500   text-xl  mt-8
+}
+
+ 
