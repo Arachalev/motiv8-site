@@ -5,7 +5,7 @@
 
 .singleTeam 
 {
-    @apply w-72 h-96    relative
+    @apply   lg:w-60 lg:h-80  xl:w-72 xl:h-96 relative
 }
 
 .singleTeam img
@@ -15,19 +15,23 @@
 
 .infoContainer
 {
-    @apply z-40 absolute bottom-0 p-2 m-4 text-white bg-gray-100 bg-opacity-30 backdrop-blur-sm flex flex-col
+    @apply z-40 absolute bottom-0 p-2 m-2 lg:m-4 text-white bg-gray-100 bg-opacity-30 backdrop-blur-sm flex flex-col
 }
 
 .infoContainer h3
 {
-    @apply text-xl font-semibold mb-2 
+    @apply text-lg lg:text-xl font-semibold lg:mb-2 
 }
 .infoContainer h4
 {
-    @apply text-lg font-medium
+    @apply text-base lg:text-lg font-medium
 }
  
+.infoContainer
+{
+    @apply text-sm lg:text-base
+}
 .socials
 {
-    @apply flex gap-2 mt-4 text-lg
+    @apply flex gap-2 mt-2 lg:mt-4 text-base xl:text-lg
 }

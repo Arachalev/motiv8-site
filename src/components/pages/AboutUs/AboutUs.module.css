@@ -5,16 +5,16 @@
 
 .mission
 {
-    @apply  mx-72 mt-32
+    @apply  mx-20 md:mx-32 xl:mx-72  mt-16 xl:mt-32
 }
 .mission h2
 {
-    @apply text-5xl text-blue-800 font-bold 
+    @apply text-3xl md:text-4xl lg:text-5xl text-blue-800 font-bold 
 }
 
 .mission p
 {
-    @apply text-blue-500   text-xl  mt-8
+    @apply text-blue-500  text-base md:text-xl  mt-8
 }
 
  

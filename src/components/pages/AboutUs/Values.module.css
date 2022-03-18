@@ -4,15 +4,15 @@
 
 .values
 {
-    @apply px-40 py-40 mt-20 mb-32 flex gap-32 bg-gray-50 
+    @apply  px-16 md:pr-0  lg:pl-20 xl:pl-32 py-40  mt-20 mb-32 flex  flex-col md:flex-row gap-16 lg:gap-20 xl:gap-32 bg-gray-50  
 }
 
 .driven{
-    @apply w-96 flex flex-col gap-8
+    @apply self-center md:self-auto  flex flex-col gap-8 md:w-72 
 }
 .driven h4
 {
-    @apply text-5xl text-blue-800 font-semibold 
+    @apply text-3xl lg:text-4xl xl:text-5xl text-blue-800 font-semibold 
 }
 .driven p
 {
@@ -25,7 +25,7 @@
 }
 
 .valuesContainer
-{@apply  flex gap-24
+{@apply self-center flex gap-12 lg:gap-16 xl:gap-24
 
 }
  

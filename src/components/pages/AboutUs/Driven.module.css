@@ -4,25 +4,29 @@
 
 
 .driven{
-    @apply grid  grid-cols-4   px-56 gap-8
+    @apply grid  grid-cols-4  items-end gap-3 md:gap-4 lg:gap-8 w-fit h-fit mx-auto px-20 md:px-32 lg:px-40  xl:px-56 
 }
 
-/* .driven1{
-    @apply h-56 
-} */
+.driven1{
+    @apply hidden md:block
+}
 .driven1 img{
-    @apply  object-cover h-56 w-72  row-start-2 mt-20
+    @apply   object-cover md:h-36 md:w-48  lg:h-44 lg:w-56   xl:h-56 xl:w-72 
 }
 
-/* .driven2 img{
-    @apply pl-8
-} */
+.driven2  {
+    @apply  col-start-1 col-span-2 md:col-span-1 justify-self-end sm:justify-self-auto
+}
+
+.driven2 img{
+    @apply h-44 m-0 sm:h-auto
+}
 .driven3{
-    @apply col-span-2
+    @apply col-span-2  place-self-start 
 }
 .driven3 img
 {
-    @apply h-72 col-span-2  pl-4 object-cover  
+    @apply h-64 lg:h-72 col-span-2  pl-4 object-cover 
 }
 .driven4 
 {
@@ -31,14 +35,14 @@
 
 .drivenText
 {
-    @apply col-span-2 mt-4
+    @apply col-span-2 mt-4 
 }
 .drivenText h2
 {
-    @apply text-6xl font-bold text-blue-800
+    @apply text-3xl md:text-4xl xl:text-5xl lg:text-6xl font-bold text-blue-800
 
 }
 .drivenText p
 {
-    @apply text-xl text-gray-800 mt-8
+    @apply  md:text-base lg:text-xl text-gray-800 mt-8
 }
