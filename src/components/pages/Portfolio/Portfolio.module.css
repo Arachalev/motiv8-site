@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.portfolio
+{
+    @apply px-20
+}
+
+.intro
+{
+    @apply text-center mb-20 mt-40 text-blog
+}
+
+.intro h3
+{
+    @apply text-6xl font-bold 
+}
+
+.intro h4
+{
+    @apply text-3xl font-semibold mt-10
+}

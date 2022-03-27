@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container
+{
+    @apply flex justify-center gap-32 mt-52   flex-wrap mx-auto
+}

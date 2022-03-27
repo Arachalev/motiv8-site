@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.contactInfo
+{
+    @apply bg-motiv8 text-white w-96 p-8
+}
+
+.welcome
+{
+    @apply mb-8
+}
+.welcome h3
+{
+    @apply text-2xl font-bold
+}
+
+.welcome p
+{
+    @apply text-xl 
+}
+.contactContainer
+{
+    @apply flex flex-col gap-8
+}
+.container
+{
+    @apply flex gap-4 items-center
+}
+
+.details h4
+{
+    @apply text-xl font-semibold
+}
+
+.info
+{
+    @apply   font-semibold mt-2
+}

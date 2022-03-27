@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container
+{
+    @apply mt-32 text-blog px-12 flex flex-col gap-8
+}
+
+.container h3
+{
+    @apply text-4xl 
+}
+
+.category
+{
+    @apply flex gap-16 justify-center
+}

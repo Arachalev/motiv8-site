@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.category
+{
+    @apply rounded px-4 py-1 font-semibold w-fit
+}
+
+.news
+{
+    @apply flex flex-col gap-6 text-blog w-96
+}
+
+.news h4
+{
+    @apply text-3xl font-semibold 
+}
+.news p
+{
+    @apply text-lg
+}
+
+.newsImage
+{
+    @apply rounded-xl overflow-clip  mt-12
+}
+
+.newsImage img
+{
+    @apply object-cover 
+}

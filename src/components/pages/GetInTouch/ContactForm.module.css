@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container
+{
+    @apply px-40 py-20 bg-white
+}
+
+.title
+{
+    @apply text-3xl font-bold
+}
+.reach
+{
+    @apply text-xl
+}
+.reach span
+{
+    @apply text-motiv8
+}
+
+.form 
+{
+    @apply mt-12 flex flex-col gap-6
+}
+
+.form button
+{
+    @apply bg-motiv8 text-white rounded-3xl w-fit py-2 px-6 self-center
+}
+
+.inputContainer
+{
+    @apply flex flex-col gap-2
+}
+.inputContainer input
+{
+    @apply border rounded-md py-2 px-2
+}
+.inputContainer label
+{
+    @apply font-semibold
+}
+.inputContainer textarea
+{
+    @apply h-40 border rounded-md px-2
+}
+
+.services h4
+{
+    @apply font-semibold 
+}
+.servicesContainer
+{
+    @apply grid grid-cols-2   gap-x-12 gap-y-3
+}
+
+.checkbox{
+    @apply flex  gap-4 items-baseline  
+}

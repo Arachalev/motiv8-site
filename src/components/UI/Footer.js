@@ -10,6 +10,7 @@ const Footer = () => {
   const date = new Date();
   return (
     <footer className={classes.footer}>
+        <hr className={classes.hr}/>
       <div className={classes.container}>
         <div className={classes.intro}>
           <div className={classes.head}>
@@ -73,7 +74,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <hr />
+      <hr  />
       <div className={classes.copyright}>
         <p>Copyright &copy; {date.getFullYear()} </p>
         <p>Designed by Motiv8</p>

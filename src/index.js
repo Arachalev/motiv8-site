@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import LandingPage from "./components/pages/LandingPage/LandingPage";
 import AboutUs from "./components/pages/AboutUs/AboutUs";
+import Blog from "./components/pages/Blog/Blog"
+import Portfolio from "./components/pages/Portfolio/Portfolio"
+import Contact from "./components/pages/GetInTouch/Contact"
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,11 +18,11 @@ ReactDOM.render(
         <Route path="/motiv8" element={<App />}>
           <Route index path="home" element={<LandingPage />} />
           <Route path="about_us" element={<AboutUs />} />
-          <Route path="contact_us" />
+          <Route path="contact_us" element={<Contact/>} />
           <Route path="our_services" />
           <Route path="the_team" />
-          <Route path="portfolio" />
-          <Route path="blog" />
+          <Route path="portfolio" element={<Portfolio/>} />
+          <Route path="blog" element={<Blog/>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -9,7 +9,8 @@ module.exports = {
       colors: ({ colors }) => ({
 
         motiv8: "#137297",
-        digi: "#ebdfd0"
+        digi: "#ebdfd0",
+        blog: "#052142"
 
       }),
       height: {
