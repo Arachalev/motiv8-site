@@ -20,7 +20,7 @@ const LandingPage = (props) => {
       <Digitize/>
       <Services/>
       <Testimony/>
-      <Pricing/>
+      {/* <Pricing/> */}
 
 
       </div>

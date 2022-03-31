@@ -2,8 +2,22 @@ import classes from "./Digitize.module.css";
 import digitize from "../../../assets/images/digitize.jpg";
 import { Fragment } from "react";
 import { GiCheckMark } from "react-icons/gi";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import CountUp from "react-countup";
 
 const Digitize = () => {
+  const { inView, ref } = useInView();
+  const statsAnimation = useAnimation();
+  if (inView) {
+    statsAnimation.start({
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    });
+  }
   return (
     <Fragment>
       <section className={classes.section}>
@@ -45,17 +59,49 @@ const Digitize = () => {
             </div>
           </div>
         </div>
-        <div className={classes.stats}>
-            <div><p>280 <br/><span>Projects launched</span></p></div>
-            <hr/>
-            <div><p>650 <br/><span>happy clients</span></p></div>
-            <hr/>
-            <div><p>+3280 <br/><span>user comments  </span></p></div>
-
-
-
-
-        </div>
+        <motion.div
+          className={classes.stats}
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1 }}
+          animate={statsAnimation}
+        >
+         { inView && <div>
+            <p className=" flex flex-col gap-2">
+              <CountUp start={0} end={200} delay={0} duration={3}>
+                {({ countUpRef }) => (                   
+                    <p ref={countUpRef} />                   
+                )}
+              </CountUp> 
+              {/* <br /> */}
+              <span>Projects launched</span>
+            </p>
+          </div>}
+          <hr />
+          {inView && <div>
+            <p className=" flex flex-col gap-2">
+              <CountUp start={0} end={650} delay={0} duration={3}>
+                {({countUpRef})=>(
+                  <p ref={countUpRef}/>
+                )}
+              </CountUp>
+              {/* 650 <br /> */}
+              <span>happy clients</span>
+            </p>
+          </div>}
+          <hr />
+          {<div>
+            <p className=" flex flex-col gap-2">
+              <CountUp start={0} end={3280} delay={0} duration={3} prefix="+ ">
+              {({countUpRef})=>(
+                <p ref={countUpRef}/>
+              )}
+              </CountUp>
+              {/* +3280 <br /> */}
+              <span>user comments </span>
+            </p>
+          </div>}
+        </motion.div>
       </section>
     </Fragment>
   );

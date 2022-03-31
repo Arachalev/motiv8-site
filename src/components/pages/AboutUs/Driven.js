@@ -3,13 +3,15 @@ import driven1 from '../../../assets/images/driven1.png'
 import driven2 from '../../../assets/images/driven2.png'
 import driven3 from '../../../assets/images/driven3.png'
 import driven4 from '../../../assets/images/driven4.png'
+import { motion } from 'framer-motion'
+
 
 const Driven = (props) => {
   return (
     <div>
       <main>
         <div className={classes.driven}>
-            <div className={classes.driven1}><img  src={driven1} alt='Team Image'/></div>
+            <motion.div className={classes.driven1} initial={{scale:0, opacity:0.8}} animate={{scale:1, opacity:1, transition:{duration:2 }}}><img  src={driven1} alt='Team Image'/></motion.div>
             <div  className={classes.driven2}> <img  src={driven2} alt='Team Image'/></div>
 
           <div className={classes.drivenText}>

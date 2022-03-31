@@ -74,9 +74,9 @@ const Header = (props) => {
             <li>
               <Link to="about_us">About Us</Link>
             </li>
-            <li>
-              <Link to="our_services">Our     Services</Link>
-            </li>
+            {/* <li>
+              <Link to="our_services">Our Services</Link>
+            </li> */}
             <li>
               <Link to="the_team">The Team</Link>
             </li>
