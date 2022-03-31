@@ -1,10 +1,23 @@
 import classes from "./News.module.css";
 import SingleNews from "./SingleNews";
-import news1 from "../../../assets/images/news1.jpg"
-import news2 from "../../../assets/images/news2.jpg"
-
+import news1 from "../../../assets/images/news1.jpg";
+import news2 from "../../../assets/images/news2.jpg";
+import { useSelector } from "react-redux";
 
 const News = (props) => {
+  //Using redux store to populate the blog items
+  // const blogNews = useSelector((state) => state.cart.items);
+  // {
+  //   blogNews.map((items) => (
+  //     <SingleNews
+  //       key={items.id}
+  //       category={items.category}
+  //       bg={items.bg}
+  //       title={items.title}
+  //       image={items.image}
+  //     />
+  //   ));  
+  // }
   return (
     <div className={classes.news}>
       <SingleNews
@@ -36,7 +49,6 @@ const News = (props) => {
         image={news2}
       />
     </div>
-    
   );
 };
 
