@@ -16,24 +16,24 @@ const HelpBusiness = () => {
 
           className={classes.className}
           icon={<SiElasticsearch />}
-          head={`Lorem ipsum dolor sit amet   `}
-          text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.`}
+          head={`Integrating innovation  `}
+          text={`Using technology to seamlessly run every aspect of your business`}
         />
         <Card
         span={classes.span}
 
           className={classes.className}
           icon={<SiElasticsearch />}
-          head={`Lorem ipsum dolor sit amet   `}
-          text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.`}
+          head={`Bringing you your target audience  `}
+          text={`Harnessing the conncetivity of the internet to bring your next clients right to you.`}
         />
         <Card
         span={classes.span}
 
           className={classes.className}
           icon={<SiElasticsearch />}
-          head={`Lorem ipsum dolor sit amet   `}
-          text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.`}
+          head={`Making your business future proof `}
+          text={`Integrating technology to make your business future proof`}
         />
       </div>
     </section>

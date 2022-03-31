@@ -16,6 +16,11 @@ const Header = (props) => {
     navigate("/motiv8/contact_us")
   }
 
+  const teamHandler = ()=>
+  {
+    navigate("/motiv8/about_us")
+  }
+
   let menu =
     "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
   const styleArray = menu.split(" ");
@@ -78,7 +83,7 @@ const Header = (props) => {
               <Link to="our_services">Our Services</Link>
             </li> */}
             <li>
-              <Link to="the_team">The Team</Link>
+              <Link to="the_team" onClick={teamHandler}>The Team</Link>
             </li>
             <li>
               <Link to="blog">Blog</Link>

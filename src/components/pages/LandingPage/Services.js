@@ -11,9 +11,9 @@ const Services = () => {
   return (
     <div className={classes.services}>
       <div className={classes.future}>
-        <h4>Future of support with a new shape</h4>
+        <h4>A glimpse into our Academy</h4>
         <p>
-          Discuss your goals, determine your success metrics, identity problems
+          Upskilling you with modern technologies to keep you ahead in your proffession
         </p>
         <button onClick={toServices}>Get started</button>
       </div>
@@ -25,7 +25,7 @@ const Services = () => {
           head={`UI/UX Design`}
           text={
           `
-              We provide quality & unique   services
+              Build clean and appealing user interfaces for modern technoogies.
             `
           }
         >
@@ -37,10 +37,10 @@ const Services = () => {
           span={classes.span}
           className={classes.className}
           icon={<SiAdobexd />}
-          head={`UI/UX Design`}
+          head={`Web Development`}
           text={
           `
-              We provide quality & unique   services
+            Build modern responsive websites with the latest technology stack
             `
           }
         >
@@ -52,10 +52,10 @@ const Services = () => {
           span={classes.span}
           className={classes.className}
           icon={<SiAdobexd />}
-          head={`UI/UX Design`}
+          head={`Networking`}
           text={
           `
-              We provide quality & unique   services
+              Understand the basics of networking in this digital era.
             `
           }
         >
@@ -67,10 +67,10 @@ const Services = () => {
           span={classes.span}
           className={classes.className}
           icon={<SiAdobexd />}
-          head={`UI/UX Design`}
+          head={`Graphics Designing`}
           text={
           `
-              We provide quality & unique   services
+              Get to be confident with Adobe suite
             `
           }
         >
@@ -82,10 +82,10 @@ const Services = () => {
           span={classes.span}
           className={classes.className}
           icon={<SiAdobexd />}
-          head={`UI/UX Design`}
+          head={`Photography`}
           text={
           `
-              We provide quality & unique  services
+             Master the lens and create stunning images!
             `
           }
         >
@@ -97,10 +97,10 @@ const Services = () => {
           span={classes.span}
           className={classes.className}
           icon={<SiAdobexd />}
-          head={`UI/UX Design`}
+          head={`Digital Marketing`}
           text={
           `
-              We provide quality & unique   services
+              Get the right tools to be a digital marketer
             `
           }
         >
