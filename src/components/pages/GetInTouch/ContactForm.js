@@ -1,5 +1,5 @@
 import classes from "./ContactForm.module.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const ContactForm = () => {
   const [formInputValidity, setFormInputValidity] = useState({
@@ -9,60 +9,66 @@ const ContactForm = () => {
     help: true,
   });
 
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const numberRef = useRef();
-  const helpRef = useRef();
-  const websiteRef = useRef()
-  const contentRef = useRef()
-  const uxRef = useRef()
-  const researchRef = useRef()
-  const consultingRef = useRef();
-  const otherRef = useRef()
-  const academyRef = useRef()
+  const nameRef = useRef(" ");
+  const emailRef = useRef(" ");
+  const numberRef = useRef(" ");
+  const helpRef = useRef(" ");
+  const websiteRef = useRef(" ");
+  const contentRef = useRef(" ");
+  const uxRef = useRef(" ");
+  const researchRef = useRef(" ");
+  const consultingRef = useRef(" ");
+  const otherRef = useRef(" ");
+  const academyRef = useRef(" ");
 
   const hasAt = (value) => value.trim().includes("@");
   const hasValue = (value) => value.trim() !== "";
-
-  const enteredName = nameRef.current.value;
-  const enteredEmail = emailRef.current.value;
-  const enteredNumber = numberRef.current.value;
-  const enteredHelp = helpRef.current.value;
-  const enteredWebsite = websiteRef.current.value;
-  console.log(enteredWebsite)
-
-  const enteredNameIsValid = hasValue(enteredName);
-  const enteredNumberIsValid = hasValue(enteredNumber);
-  const enteredEmailIsValid = hasAt(enteredEmail);
-  const enteredHelpIsValid = hasValue(enteredHelp);
-
-  setFormInputValidity({
-    name: enteredNameIsValid,
-    email: enteredEmailIsValid,
-    number: enteredNumberIsValid,
-    help: enteredHelpIsValid,
-  });
-
-  const formIsValid =
-    enteredNameIsValid &&
-    enteredEmailIsValid &&
-    enteredNumberIsValid &&
-    enteredHelpIsValid;
+  
+  // let enteredName,enteredEmail,enteredNumber,enteredHelp,enteredWebsite
 
 
-    if(!formIsValid)
-    {
-      return;
-    }
+  // useEffect(() => {
+    // const enteredName = nameRef.current.value;
+    // const enteredEmail = emailRef.current.value;
+    // const enteredNumber = numberRef.current.value;
+    // const enteredHelp = helpRef.current.value;
+    // const enteredWebsite = websiteRef.current.value;
 
-    props.onConfirm(
-      {
-        name:enteredName,
-        number:enteredNumber,
-        email:enteredEmail,
-        help:enteredHelp
-      }
-    )
+
+
+     
+  // });
+
+  // console.log(enteredWebsite);
+
+  // const enteredNameIsValid = hasValue(enteredName);
+  // const enteredNumberIsValid = hasValue(enteredNumber);
+  // const enteredEmailIsValid = hasAt(enteredEmail);
+  // const enteredHelpIsValid = hasValue(enteredHelp);
+
+  // setFormInputValidity({
+  //   name: enteredNameIsValid,
+  //   email: enteredEmailIsValid,
+  //   number: enteredNumberIsValid,
+  //   help: enteredHelpIsValid,
+  // });
+
+  // const formIsValid =
+  //   enteredNameIsValid &&
+  //   enteredEmailIsValid &&
+  //   enteredNumberIsValid &&
+  //   enteredHelpIsValid;
+
+  // if (!formIsValid) {
+  //   return;
+  // }
+
+  // props.onConfirm({
+  //   name: enteredName,
+  //   number: enteredNumber,
+  //   email: enteredEmail,
+  //   help: enteredHelp,
+  // });
 
   return (
     <div className={classes.container}>
@@ -84,7 +90,11 @@ const ContactForm = () => {
           </div>
           <div className={classes.inputContainer}>
             <label>Phone number</label>
-            <input type="tel" placeholder="+234 11 222 33 444" ref={numberRef} />
+            <input
+              type="tel"
+              placeholder="+234 11 222 33 444"
+              ref={numberRef}
+            />
           </div>
 
           <div className={classes.inputContainer}>
@@ -112,7 +122,7 @@ const ContactForm = () => {
                 <label>Content creation</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="consulting" ref={consultingRef}/>
+                <input type="checkbox" value="consulting" ref={consultingRef} />
                 <label>Strategy & consulting</label>
               </div>
               <div className={classes.checkbox}>

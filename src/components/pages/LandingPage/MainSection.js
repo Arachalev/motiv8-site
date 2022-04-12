@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js"
 import { motion } from "framer-motion";
+import World from "./World"
 // import { AiFillAlipayCircle } from "react-icons/ai";
 import landingLogo from '../../../assets/images/undraw_connection_re_lcud.svg'
 
@@ -75,7 +76,8 @@ const MainSection = () => {
         </span> */}
       </div>
       <div className={classes.landingLogo}>
-        <img src={landingLogo} alt='logo'/>
+        {/* <img src={landingLogo} alt='logo'/> */}
+        <World/>
 
       </div>
     </section>

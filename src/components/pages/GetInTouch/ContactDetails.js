@@ -8,6 +8,7 @@ const ContactDetails = () => {
     <div className={classes.contactInfo}>
       <div className={classes.welcome}>
         <h3>Get in touch</h3>
+
         <p>
           We'd love to hear from you. Our friendly team is always here to chat.
         </p>

@@ -4,7 +4,7 @@
  
 .main
 {
-    @apply flex flex-col md:flex-row   max-w-full
+    @apply flex flex-col md:flex-row  max-w-full
 }
 .landing 
 {
@@ -36,21 +36,21 @@
 
  
 
-.polygon
+/* .polygon
 {
     @apply flex flex-row md:relative 
 }
- 
+  */
 /* .p1
 {
     @apply lg:absolute lg:-left-14
 } */
-.p2
+/* .p2
 {
     @apply md:absolute lg:left-36 lg:top-40 xl:left-60 xl:top-14  
-}
+} */
 
-.p3
+/* .p3
 {
     @apply md:absolute   -bottom-60 left-24 
-}
+} */
