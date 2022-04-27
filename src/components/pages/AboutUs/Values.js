@@ -7,8 +7,16 @@ import {AiFillHeart} from "react-icons/ai"
 import{BiMessageSquareCheck} from "react-icons/bi"
 import {HiLightBulb} from "react-icons/hi"
 import {AiFillEye} from "react-icons/ai"
+import { useNavigate } from "react-router-dom";
 
 const Values = () => {
+  const navigate = useNavigate()
+  const clickHandler =(e)=>{
+    e.preventDefault()
+    navigate("/motiv8/contact_us")
+
+
+  }
   return (
     <div className={classes.values}>
       <div className={classes.driven}>
@@ -19,7 +27,7 @@ const Values = () => {
           pillars to success.
         </p>
 
-        <button>Contact us</button>
+        <button onClick={clickHandler}>Contact us</button>
       </div>
       <div className={classes.valuesContainer}>
       <div className={classes.singleValues}>

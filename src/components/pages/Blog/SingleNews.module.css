@@ -10,7 +10,7 @@
 
 .news
 {
-    @apply flex flex-col gap-6 text-blog w-96
+    @apply flex flex-col gap-6 text-blog w-96 bg-gray-100 rounded-xl p-4 h-fit
 }
 
 .news h4
@@ -30,4 +30,8 @@
 .newsImage img
 {
     @apply object-cover 
+}
+.links
+{
+    @apply flex items-center p-2 bg-gray-300 w-fit h-fit rounded-md hover:cursor-pointer
 }

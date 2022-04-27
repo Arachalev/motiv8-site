@@ -23,7 +23,7 @@ const AboutUs = (props) => {
 
       <Values/>
       {/* <hr/> */}
-      <Team/>
+      <Team id="the_team"/>
 
 
       {/* <hr/> */}

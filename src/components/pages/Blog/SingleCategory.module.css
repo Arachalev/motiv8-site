@@ -14,7 +14,7 @@
 
 .container h4
 {
-    @apply text-3xl font-bold
+    @apply text-3xl font-bold hover:cursor-pointer hover:p-1  hover:rounded-md w-fit
 }
 
 .container p

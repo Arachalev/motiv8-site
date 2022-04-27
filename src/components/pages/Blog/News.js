@@ -2,7 +2,10 @@ import classes from "./News.module.css";
 import SingleNews from "./SingleNews";
 import news1 from "../../../assets/images/news1.jpg";
 import news2 from "../../../assets/images/news2.jpg";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
+import{IoIosArrowForward} from "react-icons/io"
+
 
 const News = (props) => {
   //Using redux store to populate the blog items
@@ -18,6 +21,14 @@ const News = (props) => {
   //     />
   //   ));  
   // }
+
+  const links = <motion.div 
+    initial={{x:0}}
+    animate={{x:2}}
+    transition={{yoyo:Infinity}}
+  >
+    <IoIosArrowForward/>
+  </motion.div>
   return (
     <div className={classes.news}>
       <SingleNews
@@ -26,6 +37,8 @@ const News = (props) => {
         title=" 5 Powerful Habits of Successful Designers "
         text={`They are all iconic designers and the proponents of the design philosophy "Maximum meaning", "Minimalistic design".`}
         image={news1}
+        links={links}
+        linksText="Read More"
       />
       <SingleNews
         category="Technology"
@@ -33,6 +46,8 @@ const News = (props) => {
         title=" 5 Powerful Habits of Successful Designers "
         text={`They are all iconic designers and the proponents of the design philosophy "Maximum meaning", "Minimalistic design".`}
         image={news2}
+        links={links}
+        linksText="Read More"
       />
       <SingleNews
         category="Technology"
@@ -40,6 +55,8 @@ const News = (props) => {
         title=" 5 Powerful Habits of Successful Designers "
         text={`They are all iconic designers and the proponents of the design philosophy "Maximum meaning", "Minimalistic design".`}
         image={news2}
+        links={links}
+        linksText="Read More"
       />
       <SingleNews
         category="Technology"
@@ -47,6 +64,8 @@ const News = (props) => {
         title=" 5 Powerful Habits of Successful Designers "
         text={`They are all iconic designers and the proponents of the design philosophy "Maximum meaning", "Minimalistic design".`}
         image={news2}
+        links={links}
+        linksText="Read More"
       />
     </div>
   );

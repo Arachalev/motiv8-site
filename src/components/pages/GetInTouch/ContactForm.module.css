@@ -5,7 +5,7 @@
 
 .container
 {
-    @apply px-40 py-20 bg-white
+    @apply px-40 py-20 bg-gray-50
 }
 
 .title
@@ -34,6 +34,23 @@
 .inputContainer
 {
     @apply flex flex-col gap-2
+}
+
+.valid input
+{
+    @apply border-green-600
+}
+.valid textarea
+{
+    @apply border-green-600
+}
+.invalid input
+{
+    @apply   border-red-600
+}
+.invalid textarea
+{
+    @apply   border-red-600
 }
 .inputContainer input
 {

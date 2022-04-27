@@ -16,10 +16,10 @@ const Header = (props) => {
     navigate("/motiv8/contact_us")
   }
 
-  const teamHandler = ()=>
-  {
-    navigate("/motiv8/about_us")
-  }
+  // const teamHandler = ()=>
+  // {
+  //   navigate("/motiv8/about_us#the_team")
+  // }
 
   let menu =
     "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
@@ -54,13 +54,13 @@ const Header = (props) => {
           <div className={classes.svg}>
             <HeaderVector width="256" height="210" fill="#48a4c998" />
           </div>
-          {/* <HeaderVector   width ="312" height='259' fill="#F2F6FF"/> */}
+          {/* <HeaderVector   width ="312" height='259' fill="#F2F6FF"/> //comment this line out*/}
         </div>
         {/* <svg className={classes.svg} width="347" height="291" viewBox="0 0 347 291" fill="#F2F6FF" xmlns="http://www.w3.org/2000/svg">
 <path d="M296.216 219.639C353.024 129.175 345.5 0 345.5 0H-3V287.487C-3 287.487 239.408 310.103 296.216 219.639Z" stroke="none"/>
 </svg> */}
 
-        <div>
+        <div className="z-30">
           <Link to="/motiv8/home " > <div className={classes.logo}>
             <img alt="logo" src={Logo} />
           </div> </Link>
@@ -83,7 +83,8 @@ const Header = (props) => {
               <Link to="our_services">Our Services</Link>
             </li> */}
             <li>
-              <Link to="the_team" onClick={teamHandler}>The Team</Link>
+              <Link to="/motiv8/about_us#the_team"  >The Team</Link>
+              {/* onClick={teamHandler} */}
             </li>
             <li>
               <Link to="blog">Blog</Link>

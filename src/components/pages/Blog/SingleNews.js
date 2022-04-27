@@ -10,6 +10,7 @@ import classes from './SingleNews.module.css'
             <h4>{props.title}</h4>
             <p>{props.text}</p>
             <div className={classes.newsImage}><img src={props.image}/></div>
+           {props.links && <div className={classes.links}>{props.linksText}{props.links}</div>}
         </div>
     )
 }

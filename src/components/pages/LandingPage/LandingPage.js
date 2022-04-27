@@ -10,7 +10,7 @@ import Pricing from "./Pricing";
 
 const LandingPage = (props) => {
   return (
-    <div >
+    <div className="z-50" >
       <div className={classes.landing}>
         <MainSection />
       </div>

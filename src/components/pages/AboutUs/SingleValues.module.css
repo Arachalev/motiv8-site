@@ -8,7 +8,7 @@
 }
 .values p
 {
-    @apply text-lg lg:text-xl xl:text-2xl text-blue-800 
+    @apply text-lg lg:text-xl xl:text-2xl text-blue-700 
 }
 .values span
 {

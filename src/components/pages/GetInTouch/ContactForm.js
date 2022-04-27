@@ -1,5 +1,6 @@
 import classes from "./ContactForm.module.css";
 import { useRef, useState, useEffect } from "react";
+import { send } from "emailjs-com";
 
 const ContactForm = () => {
   const [formInputValidity, setFormInputValidity] = useState({
@@ -8,6 +9,17 @@ const ContactForm = () => {
     number: true,
     help: true,
   });
+
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    phone_number: "",
+    message: "",
+    email_address: "",
+  });
+
+  // const handleChange = (e) =>{
+  //   setToSend({...toSend, [e.target.name]:e.target.value})
+  // }
 
   const nameRef = useRef(" ");
   const emailRef = useRef(" ");
@@ -22,53 +34,127 @@ const ContactForm = () => {
   const academyRef = useRef(" ");
 
   const hasAt = (value) => value.trim().includes("@");
-  const hasValue = (value) => value.trim() !== "";
+  // const hasValue = (value) => value.trim() !== "";
+  const sixChars = (value) => value.trim().length > 6;
+
   
-  // let enteredName,enteredEmail,enteredNumber,enteredHelp,enteredWebsite
+    
+   
 
+ 
 
-  // useEffect(() => {
-    // const enteredName = nameRef.current.value;
-    // const enteredEmail = emailRef.current.value;
-    // const enteredNumber = numberRef.current.value;
-    // const enteredHelp = helpRef.current.value;
-    // const enteredWebsite = websiteRef.current.value;
+  const formHandler = (event) => {
+    event.preventDefault();
 
+    const enteredName = nameRef.current.value;
+    const enteredEmail = emailRef.current.value;
+    const enteredNumber = numberRef.current.value;
+    const enteredHelp = helpRef.current.value;
+    const enteredWebsite = websiteRef.current.value;
+    const enteredContent = contentRef.current.value;
+    const enteredUx = uxRef.current.value;
+    const enteredResearch = researchRef.current.value;
+    const enteredConsulting = consultingRef.current.value;
+    const enteredOther = otherRef.current.value;
+    const enteredAcademy = academyRef.current.value;
 
+    const enteredNameIsValid = sixChars(enteredName);
+    const enteredEmailIsValid = hasAt(enteredEmail);
+    const enteredNumberIsValid = sixChars(enteredNumber);
+    const enteredHelpIsValid = sixChars(enteredHelp);
+
+    setFormInputValidity({
+      name: enteredNameIsValid,
+      number: enteredNumberIsValid,
+      email: enteredEmailIsValid,
+      help: enteredHelpIsValid,
+    });
+
+    const formIsValid =
+      enteredNameIsValid &&
+      enteredEmailIsValid &&
+      enteredNumberIsValid &&
+      enteredHelpIsValid;
+
+    if (formIsValid) {
+      setToSend(
+        {
+          from_name: enteredName,
+          phone_number:enteredNumber,
+          email_address:enteredEmail,
+          message:enteredHelp
+  
+        })
 
      
-  // });
+    }
+    else
+    {
+      return;
+    }
+    console.log(formIsValid)
 
-  // console.log(enteredWebsite);
+   try {
 
-  // const enteredNameIsValid = hasValue(enteredName);
-  // const enteredNumberIsValid = hasValue(enteredNumber);
-  // const enteredEmailIsValid = hasAt(enteredEmail);
-  // const enteredHelpIsValid = hasValue(enteredHelp);
+     
+       send(
+        "service_w6kybpg",
+       "template_gqmfqk8",
+       toSend,
+       "TKVhFFTlKJq7zg455"
+       )
+       .then((response)=>{
+         console.log("Success", response.status, response.text)
+       })
+      
+     
+   } catch (error) {
+    // .catch((err)=>{
+    //   console.log("failed", err)
+    // })
+  
+      console.log("failed", error)
+    
+     
+   }
 
-  // setFormInputValidity({
-  //   name: enteredNameIsValid,
-  //   email: enteredEmailIsValid,
-  //   number: enteredNumberIsValid,
-  //   help: enteredHelpIsValid,
-  // });
+   if(toSend.from_name)
+   {
 
-  // const formIsValid =
-  //   enteredNameIsValid &&
-  //   enteredEmailIsValid &&
-  //   enteredNumberIsValid &&
-  //   enteredHelpIsValid;
+     nameRef.current.value = "";
+      emailRef.current.value = "";
+      numberRef.current.value = "";
+      helpRef.current.value = "";
+   }
+    
 
-  // if (!formIsValid) {
-  //   return;
-  // }
+    
+    
+      
+ 
 
-  // props.onConfirm({
-  //   name: enteredName,
-  //   number: enteredNumber,
-  //   email: enteredEmail,
-  //   help: enteredHelp,
-  // });
+    console.log(toSend.from_name)
+
+
+  
+
+   
+
+    
+  };
+
+  const nameClass = `${classes.inputContainer} ${
+    formInputValidity.name ? " " : classes.invalid
+  }`;
+  const emailClass = `${classes.inputContainer} ${
+    formInputValidity.email ? " " : classes.invalid
+  }`;
+  const numberClass = `${classes.inputContainer} ${
+    formInputValidity.number ? " " : classes.invalid
+  }`;
+  const helpClass = `${classes.inputContainer} ${
+    formInputValidity.help ? " " : classes.invalid
+  }`;
 
   return (
     <div className={classes.container}>
@@ -78,64 +164,126 @@ const ContactForm = () => {
       </p>
 
       <div className={classes.formContainer}>
-        <form className={classes.form}>
-          <div className={classes.inputContainer}>
-            <label>Name</label>
-            <input type="text" placeholder="Your name" ref={nameRef} />
+        <form className={classes.form} onSubmit={formHandler}>
+          <div className={nameClass}>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              // value={toSend.from_name}
+              // onChange={handleChange}
+              placeholder="Your name"
+              ref={nameRef}
+            />
+            {!formInputValidity.name && (
+              <p>Please your name must exceed 6 characters</p>
+            )}
           </div>
 
-          <div className={classes.inputContainer}>
-            <label>Email</label>
-            <input type="email" placeholder="john@gmail.com" ref={emailRef} />
+          <div className={emailClass}>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              // value={toSend.email_address}
+              // onChange={handleChange}
+              placeholder="john@gmail.com"
+              ref={emailRef}
+            />
+            {!formInputValidity.email && (
+              <p>Please your email must contain "@"</p>
+            )}
           </div>
-          <div className={classes.inputContainer}>
-            <label>Phone number</label>
+          <div className={numberClass}>
+            <label htmlFor="tel">Phone number</label>
             <input
               type="tel"
               placeholder="+234 11 222 33 444"
+              // value={toSend.phone_number}
+              // onChange={handleChange}
               ref={numberRef}
+              id="tel"
             />
+            {!formInputValidity.number && (
+              <p>Please your number must have more than 6 characters</p>
+            )}
           </div>
 
-          <div className={classes.inputContainer}>
-            <label>How can we help</label>
+          <div className={helpClass}>
+            <label htmlFor="textarea">How can we help</label>
             <textarea
+              id="textarea"
+              // value={toSend.message}
+              // onChange={handleChange}
               type="text-area"
               placeholder="Tell us a little about your project..."
               ref={helpRef}
             />
+            {!formInputValidity.help && (
+              <p>Please your message must be more than 6 charachters</p>
+            )}
           </div>
 
           <div className={classes.services}>
             <h4>Services</h4>
             <div className={classes.servicesContainer}>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="website" ref={websiteRef} />
-                <label>Website design</label>
+                <input
+                  id="website"
+                  type="checkbox"
+                  value="website"
+                  ref={websiteRef}
+                />
+                <label htmlFor="website">Website design</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="UX" ref={uxRef} />
-                <label>UX design</label>
+                <input id="ux" type="checkbox" value="UX" ref={uxRef} />
+                <label htmlFor="ux">UX design</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="Content" ref={contentRef} />
-                <label>Content creation</label>
+                <input
+                  id="content"
+                  type="checkbox"
+                  value="Content"
+                  ref={contentRef}
+                />
+                <label htmlFor="content">Content creation</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="consulting" ref={consultingRef} />
-                <label>Strategy & consulting</label>
+                <input
+                  id="consulting"
+                  type="checkbox"
+                  value="consulting"
+                  ref={consultingRef}
+                />
+                <label htmlFor="consulting">Strategy & consulting</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="research" ref={researchRef} />
-                <label>User research</label>
+                <input
+                  id="research"
+                  type="checkbox"
+                  value="research"
+                  ref={researchRef}
+                />
+                <label htmlFor="research">User research</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="Academy" ref={academyRef} />
-                <label>The Academy</label>
+                <input
+                  id="academy"
+                  type="checkbox"
+                  value="Academy"
+                  ref={academyRef}
+                />
+                <label htmlFor="academy">The Academy</label>
               </div>
               <div className={classes.checkbox}>
-                <input type="checkbox" value="Other" ref={otherRef} />
-                <label>Other</label>
+                <input
+                  id="other"
+                  type="checkbox"
+                  value="Other"
+                  ref={otherRef}
+                />
+                <label htmlFor="other">Other</label>
               </div>
             </div>
           </div>

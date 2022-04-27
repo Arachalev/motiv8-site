@@ -9,12 +9,12 @@
 }
 .mission h2
 {
-    @apply text-3xl md:text-4xl lg:text-5xl text-blue-800 font-bold 
+    @apply text-3xl md:text-4xl lg:text-5xl text-blue-700 font-bold 
 }
 
 .mission p
 {
-    @apply text-blue-500  text-base md:text-xl  mt-8
+    @apply text-motiv8  text-base md:text-xl  mt-8
 }
 
  

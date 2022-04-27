@@ -4,8 +4,9 @@
 
  .contact
  {
-     @apply  px-20 py-20 bg-gray-50 mt-56
+     @apply    px-20 py-20  mt-10
  }
+ 
  .contactInfo
  {
      @apply   flex    rounded-2xl  overflow-clip

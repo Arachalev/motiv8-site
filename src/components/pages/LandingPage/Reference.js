@@ -14,9 +14,9 @@ const Reference = () => {
    
 
    
-  console.log(inView);
+  // console.log(inView);
 
-  // const {inView, entry, ref} = useInView()
+ 
   // const animationControl = useAnimation()
   // if(inView){
   //   animationControl.start({
@@ -32,7 +32,7 @@ const Reference = () => {
       ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}      
-      transition={{ delay: 0.5, duration: 0.5 }}
+      transition={{  duration: 0.5 }}
     >
       { <p>
         Over <span>20K</span> businesses growing with Motiv8

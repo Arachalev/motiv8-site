@@ -1,4 +1,5 @@
 import classes from './Card.module.css'
+import { motion } from 'framer-motion'
 
 
 const Card =(props)=>{
@@ -7,7 +8,7 @@ const Card =(props)=>{
     return(
          
             <div className={className}>
-                <span className={props.span}>{props.icon}</span> 
+                < span className={props.span}>{props.icon}</ span> 
                  <h4 className={classes.head}>{props.head}</h4>
                  <p className={classes.text}>{props.text}</p>
                  <div className={ classes.childClass}>{props.children}</div>

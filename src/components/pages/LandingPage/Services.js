@@ -1,6 +1,11 @@
 import classes from "./Services.module.css";
 import Card from "./Card";
 import { SiAdobexd } from "react-icons/si";
+import {SiAdobephotoshop} from "react-icons/si"
+import {SiAdobelightroom} from "react-icons/si"
+import {IoLogoReact} from "react-icons/io5"
+import {BsHddNetworkFill} from "react-icons/bs"
+import {IoTrendingUp} from "react-icons/io5"
 import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {
@@ -15,13 +20,13 @@ const Services = () => {
         <p>
           Upskilling you with modern technologies to keep you ahead in your proffession
         </p>
-        <button onClick={toServices}>Get started</button>
+        <button onClick={toServices}>Coming Soon!!</button>
       </div>
       <div className={classes.container}>
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<SiAdobexd className="text-[#450135] bg-[#f75eee] rounded-lg" />}
           head={`UI/UX Design`}
           text={
           `
@@ -36,7 +41,7 @@ const Services = () => {
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<IoLogoReact className=" text-[#5fd6f5] " />}
           head={`Web Development`}
           text={
           `
@@ -51,7 +56,7 @@ const Services = () => {
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<BsHddNetworkFill className="text-orange-300" />}
           head={`Networking`}
           text={
           `
@@ -66,7 +71,7 @@ const Services = () => {
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<SiAdobephotoshop className="bg-[#00a5f7] text-[#001631] rounded-lg" />}          
           head={`Graphics Designing`}
           text={
           `
@@ -81,7 +86,7 @@ const Services = () => {
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<SiAdobelightroom className="bg-[#00a5f7] text-[#001631] rounded-lg" />}
           head={`Photography`}
           text={
           `
@@ -96,7 +101,7 @@ const Services = () => {
         <Card
           span={classes.span}
           className={classes.className}
-          icon={<SiAdobexd />}
+          icon={<IoTrendingUp className="bg-green-200 text-emerald-600 rounded-lg p-1" />}
           head={`Digital Marketing`}
           text={
           `
