@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .className {
-  @apply w-52 p-6 my-2  mx-4 text-left shadow-sm border  rounded-3xl justify-center hover:scale-105 hover:shadow-xl transition ease-in
+  @apply w-52 p-6 my-2  mx-4 text-left shadow-sm border  rounded-3xl  hover:scale-105 hover:shadow-xl transition ease-in
 }
 
 .link {

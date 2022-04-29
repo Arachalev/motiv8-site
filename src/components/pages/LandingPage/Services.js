@@ -28,8 +28,7 @@ const Services = () => {
           className={classes.className}
           icon={<SiAdobexd className="text-[#450135] bg-[#f75eee] rounded-lg" />}
           head={`UI/UX Design`}
-          text={
-          `
+          text={          `
               Build clean and appealing user interfaces for modern technoogies.
             `
           }

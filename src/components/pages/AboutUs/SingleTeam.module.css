@@ -5,7 +5,7 @@
 
 .singleTeam 
 {
-    @apply   lg:w-60 lg:h-80  xl:w-72 xl:h-96 relative
+    @apply   lg:w-60 lg:h-80  xl:w-72 xl:h-96 relative   
 }
 
 .singleTeam img
@@ -15,7 +15,7 @@
 
 .infoContainer
 {
-    @apply z-40 absolute bottom-0 p-2 m-2 lg:m-4 text-white bg-gray-100 bg-opacity-30 backdrop-blur-sm flex flex-col
+    @apply z-40 absolute bottom-0 p-2 m-2 lg:m-4 text-amber-900 bg-gray-100 bg-opacity-30 backdrop-blur-sm flex flex-col hover:shadow-2xl hover:scale-105 transition 
 }
 
 .infoContainer h3

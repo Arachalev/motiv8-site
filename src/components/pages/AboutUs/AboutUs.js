@@ -2,14 +2,19 @@ import classes from "./AboutUs.module.css";
 import Driven from "./Driven";
 import Values from "./Values";
 import Team from "./Team";
+import { motion } from "framer-motion";
 
 const AboutUs = (props) => {
   return (
     <main>
       <Driven />
-      <div className={classes.mission}>
+      <motion.div
+        className={classes.mission}
+        initial={{ y: 200, x: 200, opacity: 0 }}
+        whileInView={{ y: 0, x: 0, opacity: 1 }}
+        transition={{duration:1}}
+      >
         <h2>
-          
           It is our mission to remove barriers to understanding your users
           behaviours
         </h2>
@@ -19,12 +24,11 @@ const AboutUs = (props) => {
           direction, and encourage an inclusive, diverse business we continue to
           build
         </p>
-      </div>
+      </motion.div>
 
-      <Values/>
+      <Values />
       {/* <hr/> */}
-      <Team id="the_team"/>
-
+      <Team id="the_team" />
 
       {/* <hr/> */}
     </main>

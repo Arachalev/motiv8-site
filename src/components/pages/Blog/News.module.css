@@ -5,5 +5,5 @@
 
 .news
 {
-    @apply flex justify-center gap-32 mt-52   flex-wrap mx-auto
+    @apply flex justify-center gap-32 mt-32   flex-wrap mx-auto
 }

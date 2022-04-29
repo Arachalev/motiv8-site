@@ -44,13 +44,12 @@ const MainSection = () => {
           there.
         </p>
 
-         <div className={classes.ctaBtn}>
-           <button onClick={toContactUs}>
-              Get in touch with us 
-             
+         <motion.div className={classes.ctaBtn} initial={{x:-150, opacity:0}} animate={{x:0, opacity:1}} transition={{ delay:3, type:'spring', stiffness:500}}>
+           <button onClick={toContactUs} >
+              Get in touch with us              
            </button>
 
-         </div>
+         </motion.div>
       </div>
       <div className={classes.polygon}>
         {/* <span className={classes.p1}>

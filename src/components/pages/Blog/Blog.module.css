@@ -16,6 +16,10 @@
 {
     @apply justify-self-end
 } */
+
+.landing{
+    @apply uppercase text-[4rem] font-extrabold leading-[4rem]
+}
 .news
 {
     @apply p-8 text-white w-96 bg-blog h-fit row-span-2 translate-y-8 self-end rounded-md
