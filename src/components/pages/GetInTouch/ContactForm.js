@@ -1,8 +1,9 @@
 import classes from "./ContactForm.module.css";
 import { useRef, useState, useEffect } from "react";
 import { send } from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
   const [formInputValidity, setFormInputValidity] = useState({
     name: true,
     email: true,
@@ -10,16 +11,16 @@ const ContactForm = () => {
     help: true,
   });
 
-  const [toSend, setToSend] = useState({
-    from_name: "",
-    phone_number: "",
-    message: "",
-    email_address: "",
-  });
+  // const [toSend, setToSend] = useState({
+  //   from_name: "",
+  //   phone_number: "",
+  //   message: "",
+  //   email_address: "",
+  // });
 
-  // const handleChange = (e) =>{
-  //   setToSend({...toSend, [e.target.name]:e.target.value})
-  // }
+  const navigate = useNavigate()
+
+   
 
   const nameRef = useRef(" ");
   const emailRef = useRef(" ");
@@ -37,11 +38,31 @@ const ContactForm = () => {
   // const hasValue = (value) => value.trim() !== "";
   const sixChars = (value) => value.trim().length > 6;
 
-  
-    
-   
+  // const sendData = async (toSend) => {
+  //   let responseData, errorData
+  //   console.log("inside the tosend function")
 
- 
+    
+  //     responseData = await send(
+  //       "service_w6kybpg",
+  //       "template_gqmfqk8",
+  //       toSend,
+  //       "TKVhFFTlKJq7zg455"
+  //     );
+  //    console.log(responseData)
+
+  //   if(toSend.email_address) {
+  //     nameRef.current.value = "";
+  //     emailRef.current.value = "";
+  //     numberRef.current.value = "";
+  //     helpRef.current.value = "";
+  //   }
+
+
+  //   navigate("/motiv8/home")
+
+  //   // return { responseData, errorData };
+  // };
 
   const formHandler = (event) => {
     event.preventDefault();
@@ -76,71 +97,33 @@ const ContactForm = () => {
       enteredNumberIsValid &&
       enteredHelpIsValid;
 
-    if (formIsValid) {
-      setToSend(
+    // if (formIsValid) {
+    //   setToSend({
+    //     from_name: enteredName,
+    //     phone_number: enteredNumber,
+    //     email_address: enteredEmail,
+    //     message: enteredHelp,
+    //   })};
+
+    if(formIsValid){
+      props.confirm(
         {
           from_name: enteredName,
-          phone_number:enteredNumber,
-          email_address:enteredEmail,
-          message:enteredHelp
-  
-        })
+        phone_number: enteredNumber,
+        email_address: enteredEmail,
+        message: enteredHelp
+        }
+      )
 
-     
-    }
-    else
-    {
-      return;
-    }
-    console.log(formIsValid)
-
-   try {
-
-     
-       send(
-        "service_w6kybpg",
-       "template_gqmfqk8",
-       toSend,
-       "TKVhFFTlKJq7zg455"
-       )
-       .then((response)=>{
-         console.log("Success", response.status, response.text)
-       })
-      
-     
-   } catch (error) {
-    // .catch((err)=>{
-    //   console.log("failed", err)
-    // })
-  
-      console.log("failed", error)
-    
-     
-   }
-
-   if(toSend.from_name)
-   {
-
-     nameRef.current.value = "";
+      nameRef.current.value = "";
       emailRef.current.value = "";
       numberRef.current.value = "";
       helpRef.current.value = "";
-   }
-    
 
-    
-    
+    }    
       
- 
+       
 
-    console.log(toSend.from_name)
-
-
-  
-
-   
-
-    
   };
 
   const nameClass = `${classes.inputContainer} ${
@@ -293,5 +276,5 @@ const ContactForm = () => {
     </div>
   );
 };
-
+ 
 export default ContactForm;

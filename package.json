@@ -1,6 +1,5 @@
 {
   "name": "motiv8-website",
-  "homepage": "http://localhost:3000/motiv8/home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
