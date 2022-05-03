@@ -52,6 +52,10 @@
 {
     @apply   border-red-600
 }
+
+.invalid{
+    @apply text-red-500
+}
 .inputContainer input
 {
     @apply border rounded-md py-2 px-2

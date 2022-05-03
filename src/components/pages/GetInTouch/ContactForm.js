@@ -1,31 +1,45 @@
 import classes from "./ContactForm.module.css";
 import { useRef, useState, useEffect } from "react";
-import { send } from "emailjs-com";
-import { useNavigate } from "react-router-dom";
+import useHook from "../../../hooks/useHook";
+ 
 
 const ContactForm = (props) => {
-  const [formInputValidity, setFormInputValidity] = useState({
-    name: true,
-    email: true,
-    number: true,
-    help: true,
-  });
+ 
+  const{
+    userInput:name,
+    hasError:nameHasError,
+    enteredInputHandler:nameHandler,
+    onBlurHandler:nameBlurHandler,
+    reset:resetName
+  }=useHook(name=>name.trim()!="");
 
-  // const [toSend, setToSend] = useState({
-  //   from_name: "",
-  //   phone_number: "",
-  //   message: "",
-  //   email_address: "",
-  // });
+  const{
+    userInput:email,
+    hasError:emailHasError,
+    enteredInputHandler:emailHandler,
+    onBlurHandler:emailBlurHandler,
+    reset:reserEmail
+  }=useHook(email=>email.trim().includes("@"))
 
-  const navigate = useNavigate()
+  const{
+    userInput:number,
+    hasError:numberHasError,
+    enteredInputHandler:numberHandler,
+    onBlurHandler:numberBlurHandler,
+    reset:resetNumber
+  }=useHook(number=>number.length >= 6)
 
-   
+  const{
+    userInput:help,
+    hasError:helpHasError,
+    enteredInputHandler:helpHandler,
+    onBlurHandler:helpBlurHandler,
+    reset:resetHelp
+  }=useHook(help=>help.length>=10)
 
-  const nameRef = useRef(" ");
-  const emailRef = useRef(" ");
-  const numberRef = useRef(" ");
-  const helpRef = useRef(" ");
+  let formState = emailHasError || nameHasError || numberHasError || helpHasError
+
+  
   const websiteRef = useRef(" ");
   const contentRef = useRef(" ");
   const uxRef = useRef(" ");
@@ -33,44 +47,11 @@ const ContactForm = (props) => {
   const consultingRef = useRef(" ");
   const otherRef = useRef(" ");
   const academyRef = useRef(" ");
-
-  const hasAt = (value) => value.trim().includes("@");
-  // const hasValue = (value) => value.trim() !== "";
-  const sixChars = (value) => value.trim().length > 6;
-
-  // const sendData = async (toSend) => {
-  //   let responseData, errorData
-  //   console.log("inside the tosend function")
-
-    
-  //     responseData = await send(
-  //       "service_w6kybpg",
-  //       "template_gqmfqk8",
-  //       toSend,
-  //       "TKVhFFTlKJq7zg455"
-  //     );
-  //    console.log(responseData)
-
-  //   if(toSend.email_address) {
-  //     nameRef.current.value = "";
-  //     emailRef.current.value = "";
-  //     numberRef.current.value = "";
-  //     helpRef.current.value = "";
-  //   }
-
-
-  //   navigate("/motiv8/home")
-
-  //   // return { responseData, errorData };
-  // };
-
+ 
+ 
   const formHandler = (event) => {
     event.preventDefault();
-
-    const enteredName = nameRef.current.value;
-    const enteredEmail = emailRef.current.value;
-    const enteredNumber = numberRef.current.value;
-    const enteredHelp = helpRef.current.value;
+ 
     const enteredWebsite = websiteRef.current.value;
     const enteredContent = contentRef.current.value;
     const enteredUx = uxRef.current.value;
@@ -78,65 +59,42 @@ const ContactForm = (props) => {
     const enteredConsulting = consultingRef.current.value;
     const enteredOther = otherRef.current.value;
     const enteredAcademy = academyRef.current.value;
-
-    const enteredNameIsValid = sixChars(enteredName);
-    const enteredEmailIsValid = hasAt(enteredEmail);
-    const enteredNumberIsValid = sixChars(enteredNumber);
-    const enteredHelpIsValid = sixChars(enteredHelp);
-
-    setFormInputValidity({
-      name: enteredNameIsValid,
-      number: enteredNumberIsValid,
-      email: enteredEmailIsValid,
-      help: enteredHelpIsValid,
-    });
-
-    const formIsValid =
-      enteredNameIsValid &&
-      enteredEmailIsValid &&
-      enteredNumberIsValid &&
-      enteredHelpIsValid;
-
-    // if (formIsValid) {
-    //   setToSend({
-    //     from_name: enteredName,
-    //     phone_number: enteredNumber,
-    //     email_address: enteredEmail,
-    //     message: enteredHelp,
-    //   })};
-
-    if(formIsValid){
-      props.confirm(
-        {
-          from_name: enteredName,
-        phone_number: enteredNumber,
-        email_address: enteredEmail,
-        message: enteredHelp
-        }
-      )
-
-      nameRef.current.value = "";
-      emailRef.current.value = "";
-      numberRef.current.value = "";
-      helpRef.current.value = "";
-
+ 
+ 
+    if(formState){
+    return
     }    
-      
-       
+    
+    formState = true;
+    props.confirm(
+      {
+      from_name: name,
+      phone_number: number,
+      email_address: email,
+      message: help
+      }
+    )
 
+    reserEmail()
+    resetName()
+    resetHelp()
+    resetNumber()
+
+    formState = false   
+    console.log(emailBlurHandler) 
   };
 
   const nameClass = `${classes.inputContainer} ${
-    formInputValidity.name ? " " : classes.invalid
+    !nameHasError ? " " : classes.invalid
   }`;
   const emailClass = `${classes.inputContainer} ${
-    formInputValidity.email ? " " : classes.invalid
+    !emailHasError ? " " : classes.invalid
   }`;
   const numberClass = `${classes.inputContainer} ${
-    formInputValidity.number ? " " : classes.invalid
+    !numberHasError ? " " : classes.invalid
   }`;
   const helpClass = `${classes.inputContainer} ${
-    formInputValidity.help ? " " : classes.invalid
+    !helpHasError ? " " : classes.invalid
   }`;
 
   return (
@@ -153,13 +111,14 @@ const ContactForm = (props) => {
             <input
               type="text"
               id="name"
-              // value={toSend.from_name}
-              // onChange={handleChange}
-              placeholder="Your name"
-              ref={nameRef}
+              onChange={nameHandler}
+              onBlur={nameBlurHandler}
+              value={name}
+              placeholder="John Doe"
+              // ref={nameRef}
             />
-            {!formInputValidity.name && (
-              <p>Please your name must exceed 6 characters</p>
+            {nameHasError && (
+              <p className = {classes.invalid}>Please your name must exceed 6 characters</p>
             )}
           </div>
 
@@ -167,43 +126,47 @@ const ContactForm = (props) => {
             <label htmlFor="email">Email</label>
             <input
               type="email"
-              id="email"
-              // value={toSend.email_address}
-              // onChange={handleChange}
+              id="email" 
               placeholder="john@gmail.com"
-              ref={emailRef}
+              onChange={emailHandler}
+              onBlur={emailBlurHandler}
+              value={email}
+              // ref={emailRef}
             />
-            {!formInputValidity.email && (
-              <p>Please your email must contain "@"</p>
+            {emailHasError && (
+              <p className = {classes.invalid}>Please your email must contain "@"</p>
             )}
           </div>
           <div className={numberClass}>
             <label htmlFor="tel">Phone number</label>
             <input
               type="tel"
-              placeholder="+234 11 222 33 444"
-              // value={toSend.phone_number}
-              // onChange={handleChange}
-              ref={numberRef}
+              placeholder="+234 11 222 33 444" 
+              // ref={numberRef}
               id="tel"
+              onChange={numberHandler}
+              onBlur={numberBlurHandler}
+              value={number}
             />
-            {!formInputValidity.number && (
-              <p>Please your number must have more than 6 characters</p>
+            {numberHasError && (
+              <p className = {classes.invalid}>Please your number must have more than 6 characters</p>
             )}
           </div>
 
           <div className={helpClass}>
             <label htmlFor="textarea">How can we help</label>
             <textarea
-              id="textarea"
-              // value={toSend.message}
-              // onChange={handleChange}
+              id="textarea" 
               type="text-area"
               placeholder="Tell us a little about your project..."
-              ref={helpRef}
+              // ref={helpRef}
+              onChange={helpHandler}
+              onBlur={helpBlurHandler}
+              value={help}
+
             />
-            {!formInputValidity.help && (
-              <p>Please your message must be more than 6 charachters</p>
+            {helpHasError && (
+              <p className = {classes.invalid}>Please your message must be more than 6 charachters</p>
             )}
           </div>
 

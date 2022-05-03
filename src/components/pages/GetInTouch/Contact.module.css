@@ -11,3 +11,18 @@
  {
      @apply   flex    rounded-2xl  overflow-clip
  }
+
+ .backDrop
+ {
+     @apply z-50   h-screen flex flex-col gap-8 justify-center
+ }
+
+ .backDrop p
+ {
+     @apply text-3xl text-center text-motiv8
+ }
+
+ .backDrop button
+ {
+     @apply px-10 py-4 text-center font-bold text-xl bg-blue-500 text-white rounded-2xl  hover:scale-105  w-fit self-center  
+ }
