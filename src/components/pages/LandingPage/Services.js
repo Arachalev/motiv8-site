@@ -10,17 +10,20 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {
   let navigate = useNavigate();
-  const toServices = ()=>{
-    navigate("/motiv8/our_services")
+  const toContactUs = ()=>{
+    navigate("/motiv8/contact_us")
   }
   return (
     <div className={classes.services}>
       <div className={classes.future}>
-        <h4>A glimpse into our Academy</h4>
+        {/* <h4>A glimpse into our Academy</h4> */}
+        <h4>Some of the services we offer</h4>
         <p>
           Upskilling you with modern technologies to keep you ahead in your proffession
         </p>
-        <button onClick={toServices}>Coming Soon!!</button>
+        {/* <button onClick={toServices}>Coming Soon!!</button> */}
+        <button onClick={toContactUs}>Get in touch!!</button>
+
       </div>
       <div className={classes.container}>
         <Card
@@ -34,7 +37,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
         <Card
@@ -49,7 +52,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
         <Card
@@ -64,7 +67,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
         <Card
@@ -79,7 +82,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
         <Card
@@ -94,7 +97,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
         <Card
@@ -109,7 +112,7 @@ const Services = () => {
           }
         >
           <p className={classes.link}>
-            <Link to={`#`}>Learn More</Link>
+            {/* <Link to={`#`}>Learn More</Link> */}
           </p>
         </Card>
       </div>
