@@ -77,7 +77,7 @@ const Digitize = () => {
           {inView && (
             <div>
               <div className=" flex flex-col gap-2">
-                <CountUp start={0} end={200} delay={100} duration={4} onEnd={() => console.log('Ended! 👏')}
+                <CountUp start={0} end={200} delay={0} duration={4} onEnd={() => console.log('Ended! 👏')}
   onStart={() => console.log('Started! 💨')}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
@@ -90,7 +90,7 @@ const Digitize = () => {
           {inView && (
             <div>
               <div className=" flex flex-col gap-2">
-                <CountUp start={0} end={650} delay={100} duration={4}>
+                <CountUp start={0} end={650} delay={0} duration={4}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* 650 <br /> */}
@@ -105,7 +105,7 @@ const Digitize = () => {
                 <CountUp
                   start={0}
                   end={3280}
-                  delay={100}
+                  delay={0}
                   duration={4}
                   prefix="+ "
                 >

@@ -12,14 +12,14 @@ const LandingPage = (props) => {
   return (
     <div className={classes.landingPage} >
       <div className={classes.landing}>
-        {/* <MainSection /> */}
+        <MainSection />
       </div>
       <div>
-        {/* <Reference/> */}
-      {/* <HelpBusiness/> */}
+        <Reference/>
+      <HelpBusiness/>
       <Digitize/>
-      {/* <Services/> */}
-      {/* <Testimony/> */}
+      <Services/>
+      <Testimony/>
       {/* <Pricing/> */}
 
 
