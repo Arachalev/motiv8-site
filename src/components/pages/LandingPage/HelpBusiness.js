@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const HelpBusiness = () => {
   const rotate = (
-    <motion.div animate={{rotate:360}} transition={{repeat:Infinity, duration:2}}>
+    <motion.div animate={{rotate:360}} whileInView={{transition:{repeat:Infinity, duration:2}}} >
       <FcProcess />
     </motion.div>
   );
@@ -19,7 +19,7 @@ const HelpBusiness = () => {
   )
 
   return (
-    <section>
+    <section className={classes.helpContainer}>
       <div className={classes.help}>
         <h4>How can we help your business? </h4>
         <p>Technology for innovation </p>
@@ -46,6 +46,7 @@ const HelpBusiness = () => {
           head={`Making your business future proof `}
           text={`Integrating technology to make your business future proof`}
         />
+         
       </div>
     </section>
   );

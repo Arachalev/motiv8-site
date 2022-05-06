@@ -68,51 +68,52 @@ const Digitize = () => {
           className={classes.stats}
           ref={ref}
           initial={{ opacity: 0, y: 150 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+          whileInView={{ transition:{ delay:2, duration:4}, opacity: 1, y: 0 }}
+          // transition={{ delay:0.5 }}
           // animate={{duration:5}}
 
           // animate={statsAnimation}
         >
           {inView && (
             <div>
-              <p className=" flex flex-col gap-2">
-                <CountUp start={0} end={200} delay={0} duration={3}>
+              <div className=" flex flex-col gap-2">
+                <CountUp start={0} end={200} delay={100} duration={4} onEnd={() => console.log('Ended! 👏')}
+  onStart={() => console.log('Started! 💨')}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* <br /> */}
                 <span>Projects launched</span>
-              </p>
+              </div>
             </div>
           )}
           <hr />
           {inView && (
             <div>
-              <p className=" flex flex-col gap-2">
-                <CountUp start={0} end={650} delay={0} duration={3}>
+              <div className=" flex flex-col gap-2">
+                <CountUp start={0} end={650} delay={100} duration={4}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* 650 <br /> */}
                 <span>happy clients</span>
-              </p>
+              </div>
             </div>
           )}
           <hr />
           {inView && (
             <div>
-              <p className=" flex flex-col gap-2">
+              <div className=" flex flex-col gap-2">
                 <CountUp
                   start={0}
                   end={3280}
-                  delay={0}
-                  duration={3}
+                  delay={100}
+                  duration={4}
                   prefix="+ "
                 >
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* +3280 <br /> */}
-                <span>user comments </span>
-              </p>
+                <span>Positive Reviews </span>
+              </div>
             </div>
           )}
         </motion.div>

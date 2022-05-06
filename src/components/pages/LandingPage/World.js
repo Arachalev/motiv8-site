@@ -5,9 +5,6 @@ import * as d3 from "d3-dsv"
 // import  * from "d3-dsv"
 
 
-
-// const { useState, useEffect, useRef } = React;
-
   const COUNTRY = 'Nigeria';
   const MAP_CENTER = { lat: 6.5244, lng: 3.3792, altitude: 2 };
   const OPACITY = 0.3;
@@ -33,7 +30,7 @@ import * as d3 from "d3-dsv"
         // const filteredAirports = airports.filter(d => d.country === COUNTRY);
         const filteredAirports = airports;
         const byIata =  indexBy(filteredAirports, 'iata', false);
-        console.log(byIata)
+        // console.log(byIata)
 
 
         const filteredRoutes = routes
@@ -54,14 +51,21 @@ import * as d3 from "d3-dsv"
       });
     }, []);
 
+    
+
+   
+
+
+
+     
     return (
-        <div   >
+        <div>
 
 
 <Globe
       backgroundColor="#ffffff"
-      width = {500}
-      height={500}
+      width = {400}
+      height={400}
       animateIn={true}
       showAtmosphere={true}
       atmosphereColor="#9945f0"

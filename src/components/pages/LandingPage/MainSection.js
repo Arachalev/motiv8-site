@@ -16,9 +16,9 @@ const MainSection = () => {
     const typed = new Typed(el.current,{
       strings:[ "boost sales", "improve learning","change your business narrative"],
       startDelay:300,
-      typeSpeed:100,
-      backSpeed:100,
-      backDelay:150,
+      typeSpeed:90,
+      backSpeed:20,
+      backDelay:600,
       smartBackspace:true,
       loop:true,
       showCursor:false
@@ -46,7 +46,7 @@ const MainSection = () => {
 
          <motion.div className={classes.ctaBtn} initial={{x:-150, opacity:0}} animate={{x:0, opacity:1}} transition={{ delay:3, type:'spring', stiffness:500}}>
            <button onClick={toContactUs} >
-              Get in touch with us              
+              Get in touch              
            </button>
 
          </motion.div>

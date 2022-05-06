@@ -10,16 +10,16 @@ import Pricing from "./Pricing";
 
 const LandingPage = (props) => {
   return (
-    <div className="z-50" >
+    <div className={classes.landingPage} >
       <div className={classes.landing}>
-        <MainSection />
+        {/* <MainSection /> */}
       </div>
       <div>
-        <Reference/>
-      <HelpBusiness/>
+        {/* <Reference/> */}
+      {/* <HelpBusiness/> */}
       <Digitize/>
-      <Services/>
-      <Testimony/>
+      {/* <Services/> */}
+      {/* <Testimony/> */}
       {/* <Pricing/> */}
 
 

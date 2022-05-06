@@ -4,7 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.landingPage
+{
+    @apply z-50 w-[100vw] px-8 m-0 overflow-clip
+}
  .landing
  {
-     @apply  pb-20 md:pb-32 mt-10 md:mt-20
+     @apply w-full pb-20 md:pb-32 mt-10 md:mt-20  
  }

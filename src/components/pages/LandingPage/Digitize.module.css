@@ -15,24 +15,24 @@
 
 .digitize
 {
-    @apply flex flex-row w-full h-digi p-12
+    @apply flex flex-col md:flex-row w-full h-fit md:h-digi pl-8 md:pl-0 md:p-12
 }
 
 .client
 {
-    @apply w-1/2 
+    @apply  md:w-1/2 
     
 }
  
 
 .client h4
 {
-    @apply text-black capitalize text-2xl lg:text-4xl font-bold mb-10
+    @apply text-black capitalize text-2xl lg:text-4xl font-bold mb-10 
 }
 
 .image
 {
-    @apply w-5/6 h-4/5 rounded-3xl overflow-hidden 
+    @apply  md:w-5/6 md:h-4/5 rounded-3xl overflow-hidden 
 }
 
 .image img
@@ -43,7 +43,7 @@
 
 .standard
 {
-    @apply w-1/2 mt-36 
+    @apply md:w-1/2 mt-8 md:mt-36 
 }
 .standard h4
 {
@@ -51,7 +51,7 @@
 }
 
 .services{
-    @apply mt-20
+    @apply mt-8 md:mt-20
 }
 .services p 
 { 
@@ -64,7 +64,7 @@
 
 .stats
 {
-    @apply flex flex-row gap-2 p-4  absolute left-56 bottom-12  bg-motiv8 rounded-2xl md:gap-4 md:p-8  md:left-56 md:bottom-20 lg:left-96 
+    @apply flex flex-col md:flex-row gap-2 p-4  absolute left-56 bottom-12  bg-motiv8 rounded-2xl md:gap-4 md:p-8  md:left-56 md:bottom-20 lg:left-96 
 }
 
 .stats div
@@ -73,7 +73,7 @@
 }
 .stats hr
 {
-    @apply w-px h-14 bg-black p-px border-none m-0
+    @apply w-full md:w-px h-px md:h-14 bg-black p-px border-none m-0
 }
 
 .stats p
