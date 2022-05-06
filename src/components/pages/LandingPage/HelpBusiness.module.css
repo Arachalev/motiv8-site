@@ -4,7 +4,7 @@
 
 .helpContainer
 {
-    @apply flex flex-col items-center gap-8 
+    @apply px-8 flex flex-col items-center gap-8 
 }
 .help
 {

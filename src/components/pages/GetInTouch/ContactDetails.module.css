@@ -23,13 +23,17 @@
 }
 .contactContainer
 {
-    @apply flex flex-col gap-8
+    @apply flex flex-col gap-8 
 }
 .container
 {
     @apply flex gap-4 items-center
 }
 
+.details
+{
+    @apply min-w-fit
+}
 .details h4
 {
     @apply text-xl font-semibold

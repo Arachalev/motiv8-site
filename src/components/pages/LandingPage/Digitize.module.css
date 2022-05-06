@@ -1,8 +1,8 @@
 /* fffcs3 */
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 .section{
     background-color: #137297;
@@ -10,7 +10,7 @@
 }
 .section
 {
-    @apply bg-digi  drop-shadow-digi   mt-40
+    @apply bg-digi  drop-shadow-digi   mt-40 px-8
 }
 
 .digitize

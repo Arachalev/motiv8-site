@@ -19,7 +19,7 @@ function App() {
     <Fragment>
       <Header/>
       <Outlet/>
-      {/* <Footer/> */}
+      <Footer/>
 
     </Fragment>
        

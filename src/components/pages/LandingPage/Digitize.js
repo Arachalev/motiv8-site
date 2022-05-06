@@ -68,7 +68,8 @@ const Digitize = () => {
           className={classes.stats}
           ref={ref}
           initial={{ opacity: 0, y: 150 }}
-          whileInView={{ transition:{ delay:2, duration:4}, opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          // transition:{ delay:2, duration:4},
           // transition={{ delay:0.5 }}
           // animate={{duration:5}}
 
@@ -77,7 +78,7 @@ const Digitize = () => {
           {inView && (
             <div>
               <div className=" flex flex-col gap-2">
-                <CountUp start={0} end={200} delay={0} duration={4} onEnd={() => console.log('Ended! 👏')}
+                <CountUp start={0} end={200} delay={0} duration={2} onEnd={() => console.log('Ended! 👏')}
   onStart={() => console.log('Started! 💨')}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
@@ -90,7 +91,7 @@ const Digitize = () => {
           {inView && (
             <div>
               <div className=" flex flex-col gap-2">
-                <CountUp start={0} end={650} delay={0} duration={4}>
+                <CountUp start={0} end={650} delay={0} duration={2}>
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* 650 <br /> */}
@@ -106,7 +107,7 @@ const Digitize = () => {
                   start={0}
                   end={3280}
                   delay={0}
-                  duration={4}
+                  duration={2}
                   prefix="+ "
                 >
                   {({ countUpRef }) => <p ref={countUpRef} />}
