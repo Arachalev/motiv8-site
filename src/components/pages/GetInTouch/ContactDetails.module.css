@@ -5,7 +5,7 @@
 
 .contactInfo
 {
-    @apply bg-motiv8 text-white w-96 p-8 
+    @apply bg-blue-500 text-white w-96 p-8 
 }
 
 .welcome
