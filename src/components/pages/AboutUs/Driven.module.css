@@ -11,7 +11,7 @@
     @apply hidden md:block
 }
 .driven1 img{
-    @apply   object-cover md:h-36 md:w-48  lg:h-44 lg:w-56   xl:h-56 xl:w-72 
+    @apply   object-cover h-10 w-20 sm:h-20 sm:w-32  md:h-36 md:w-48  lg:h-44 lg:w-56   xl:h-56 xl:w-72 
 }
 
 .driven2  {
@@ -26,7 +26,7 @@
 }
 .driven3 img
 {
-    @apply h-64 lg:h-72 col-span-2  pl-4 object-cover 
+    @apply h-44 sm:h-64 lg:h-72 col-span-2  pl-4 object-cover 
 }
 .driven4 
 {
@@ -39,10 +39,10 @@
 }
 .drivenText h2
 {
-    @apply text-3xl md:text-4xl xl:text-5xl lg:text-6xl font-bold text-blue-700
+    @apply text-xl sm:text-3xl md:text-4xl xl:text-5xl lg:text-6xl font-bold text-blue-700
 
 }
 .drivenText p
 {
-    @apply  md:text-base lg:text-xl text-gray-800 mt-8
+    @apply text-sm   sm:text-base lg:text-xl text-gray-800 mt-8
 }

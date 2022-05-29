@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 
+.about
+{
+    @apply max-w-[100vw] overflow-hidden
+}
 .mission
 {
-    @apply  mx-20 md:mx-32 xl:mx-72  mt-16 xl:mt-32
+    @apply  mx-20 md:mx-32 xl:mx-72  mt-16 xl:mt-32 
 }
 .mission h2
 {

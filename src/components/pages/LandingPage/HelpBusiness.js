@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 const HelpBusiness = () => {
   const rotate = (
-    <motion.div animate={{rotate:360}} whileInView={{transition:{repeat:Infinity, duration:2}}} >
+    <motion.div whileInView={{rotate:360}}   transition={{repeat:4, duration:2.4}}  >
       <FcProcess />
     </motion.div>
   );
   const car = (
-    <motion.div initial={{x:-20}} whileHover={{}} animate={{x:40}} transition={{repeat:Infinity, duration:2}}>
+    <motion.div initial={{x:-20}}   whileInView={{x:40}} transition={{repeat:4, duration:2}}>
       <FcInTransit/>
     </motion.div>
   )

@@ -25,7 +25,7 @@
 }
 
 .valuesContainer
-{@apply self-center flex gap-12 lg:gap-16 xl:gap-24
+{@apply self-center flex px-8 gap-4 sm:gap-12 lg:gap-16 xl:gap-24
 
 }
  

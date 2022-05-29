@@ -22,7 +22,7 @@ const Blog = (props) => {
               duration: 1,
             }}
           >
-            {" "}
+            
             <h4>
               Discover our <br /> <span>digital world</span>
             </h4>

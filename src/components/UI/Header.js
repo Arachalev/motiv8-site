@@ -22,24 +22,30 @@ const Header = (props) => {
   // }
 
   let menu =
-    "absolute top-14 right-8  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
+    " h-[100vh] w-[100vw]  bg-white  absolute md:h-auto md:w-auto md:bg-none  pr-8 top-14 right-0  flex items-end gap-3 flex-col md:static md:flex md:block md:flex-row lg:gap-6 transition ease-in";
   const styleArray = menu.split(" ");
 
   if (isModal) {
     menu = menu;
+
   }
   // else if (styleArray[0] === "hidden") {
   //   return;
   // }
   else {
-    styleArray.splice(0, 0, "hidden");
+    styleArray.splice(0, 4, "hidden");
     menu = styleArray.join(" ");
+
   }
 
   const burgerHandler = (e) => {
     e.preventDefault();
     setIsModal(!isModal);
   };
+ const change = e =>{
+   e.preventDefault();
+    setIsModal(!isModal) 
+ }
 
   return (
     <Fragment>
@@ -74,14 +80,16 @@ const Header = (props) => {
               className="m-0 inline "
             />
           </div>
-
-          <ul id="menu" className={menu}>
+          
+          <div onClick={change}>
+          <ul id="menu" className={menu}  >
+          <li >
+              <Link to="/motiv8/home" >Home</Link>
+            </li>
             <li>
               <Link to="about_us">About Us</Link>
             </li>
-            {/* <li>
-              <Link to="our_services">Our Services</Link>
-            </li> */}
+            
             <li>
               <Link to="/motiv8/about_us#the_team"  >The Team</Link>
               {/* onClick={teamHandler} */}
@@ -96,6 +104,9 @@ const Header = (props) => {
               <button onClick={contactUs}>Get In Touch</button>
             </li>
           </ul>
+
+          </div>
+         
         </div>
       </header>
     </Fragment>

@@ -18,40 +18,40 @@ import test2 from "../../../assets/images/test2.jpg";
 import test3 from "../../../assets/images/test3.jpg";
 
 const Testimony = () => {
-  let slideIndex = 2;
-  const slideShow = useCallback( (n) => {
-    let testimony = document.getElementsByClassName("home");
+  // let slideIndex = 2;
+  // const slideShow = useCallback( (n) => {
+  //   let testimony = document.getElementsByClassName("home");
 
-    if (n > testimony.length) {
-      slideIndex = 2;
-    }
-    if (n < 2) {
-      slideIndex = testimony.length;
-    }
+  //   if (n > testimony.length) {
+  //     slideIndex = 2;
+  //   }
+  //   if (n < 2) {
+  //     slideIndex = testimony.length;
+  //   }
 
-    for (let i = 0; i < testimony.length; i++) {
-      testimony[i].classList.add("hidden");
-    }
-    testimony[slideIndex - 1].classList.remove("hidden");
-    testimony[slideIndex - 2].classList.remove("hidden");
-  },[slideIndex]);
+  //   for (let i = 0; i < testimony.length; i++) {
+  //     testimony[i].classList.add("hidden");
+  //   }
+  //   testimony[slideIndex - 1].classList.remove("hidden");
+  //   testimony[slideIndex - 2].classList.remove("hidden");
+  // },[slideIndex]);
 
-  const plusSlides = () => {
-    slideShow((slideIndex += 1));
-  };
-  const prevSlides = () => {
-    slideShow((slideIndex -= 1));
-  };
+  // const plusSlides = () => {
+  //   slideShow((slideIndex += 1));
+  // };
+  // const prevSlides = () => {
+  //   slideShow((slideIndex -= 1));
+  // };
 
-  useEffect(() => {
-    slideShow(slideIndex);
-  }, [slideShow, slideIndex]);
+  // useEffect(() => {
+  //   slideShow(slideIndex);
+  // }, [slideShow, slideIndex]);
 
   return (
     <div className={classes.testimony}>
       <div className={classes.intro}>
         <h4>What our happy clients say</h4>
-        <p>Things that makes it the best place to start trading</p>
+        <p>Things that makes it the best place to start building</p>
       </div>
       <div className={classes.testimonies}>
         <TestimonySingle
@@ -90,10 +90,10 @@ const Testimony = () => {
           title={`Co-Founder Amazon`}
         />
       </div>
-      <div className=" flex flex-row justify-center gap-4 ">
+      {/* <div className=" flex flex-row justify-center gap-4 ">
         <GrPrevious onClick={prevSlides} />
         <GrNext onClick={plusSlides} />
-      </div>
+      </div> */}
     </div>
   );
 };

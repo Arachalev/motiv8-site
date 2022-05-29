@@ -20,7 +20,7 @@
 
 .future
 {
-    @apply text-center  pl-12 py-12 lg:w-1/2 lg:text-left 
+    @apply text-center px-6  py-12 lg:px-0 lg:pl-12 lg:w-1/2 lg:text-left 
 }
 .future h4
 {
@@ -39,5 +39,31 @@
 
 .container
 {
-    @apply flex flex-wrap flex-row py-3 w-fit justify-center  gap-2 md:gap-4 md:py-6  
+    @apply overflow-x-auto flex md:flex-wrap md:flex-row py-3 w-full md:w-fit justify-center  gap-2 md:gap-4 md:py-6  
 }
+
+
+ .container::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+/* .testimonyContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.testimonyContainer{
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+ 
+
+.testimonyContainer
+{
+    @apply flex gap-8   w-full overflow-x-auto py-8
+} */

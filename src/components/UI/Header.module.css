@@ -40,8 +40,10 @@ header{
 
 .hamburger
 {
-    @apply   text-2xl justify-self-end inline cursor-pointer  md:hidden  
+    @apply z-50   text-2xl justify-self-end inline cursor-pointer  md:hidden  
 }
+
+ 
 
 #contact 
 {
@@ -49,7 +51,7 @@ header{
 }
 .links
 {
-    @apply flex flex-col items-start h-fit
+    @apply flex flex-col items-start h-fit 
 }
 
 .links li

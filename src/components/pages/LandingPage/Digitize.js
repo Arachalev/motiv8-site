@@ -18,13 +18,42 @@ const Digitize = () => {
   //     },
   //   });
   // }
+
+  const container = {
+    hidden: { opacity: 0, y:200 },
+    show: {
+      opacity: 1,
+      y:0,
+       
+      transition: {
+        delayChildren: 1,
+        duration:1.5
+      }
+    }
+  }
+
+  const childContainer = {
+    hidden:{
+      opacity:0, y:150
+    },
+    show:{
+      opacity:1,
+      y:0,
+     
+    }
+   
+  }
+  
   return (
     <Fragment>
       <motion.section
         className={classes.section}
-        initial={{ opacity: 0, y: 200 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5 }}
+        // initial={{ opacity: 0, y: 200 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 1.5  }}
+        variants={container}
+        initial="hidden"
+        whileInView="show"
       >
         <div className={classes.digitize}>
           <div className={classes.client}>
@@ -64,16 +93,16 @@ const Digitize = () => {
             </div>
           </div>
         </div>
-        <motion.div
+         <motion.div
           className={classes.stats}
           ref={ref}
-          initial={{ opacity: 0, y: 150 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          // transition:{ delay:2, duration:4},
-          // transition={{ delay:0.5 }}
-          // animate={{duration:5}}
-
-          // animate={statsAnimation}
+          variants={childContainer}
+          initial="hidden"
+          whileInView="show"
+          // initial={{ opacity: 0, y: 150 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ repeat:1, delay:2 }}
+       
         >
           {inView && (
             <div>
@@ -117,7 +146,7 @@ const Digitize = () => {
               </div>
             </div>
           )}
-        </motion.div>
+        </motion.div> 
       </motion.section>
     </Fragment>
   );

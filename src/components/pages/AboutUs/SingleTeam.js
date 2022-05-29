@@ -18,9 +18,9 @@ const SingleTeam = (props) => {
         <h4>{props.position}</h4>
         <p>{props.about}</p>
         <div className={classes.socials}>
-          <AiOutlineTwitter />
-          <AiOutlineInstagram />
-          <AiOutlineGithub />
+          <AiOutlineTwitter className=" text-sm sm:text-base"/>
+          <AiOutlineInstagram className=" text-sm sm:text-base"/>
+          <AiOutlineGithub className=" text-sm sm:text-base"/>
         </div>
       </div>
     </motion.div>

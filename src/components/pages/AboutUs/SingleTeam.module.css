@@ -5,7 +5,7 @@
 
 .singleTeam 
 {
-    @apply   lg:w-60 lg:h-80  xl:w-72 xl:h-96 relative   
+    @apply w-44 h-64  lg:w-60 lg:h-80  xl:w-72 xl:h-96 relative   
 }
 
 .singleTeam img
@@ -20,16 +20,20 @@
 
 .infoContainer h3
 {
-    @apply text-lg lg:text-xl font-semibold lg:mb-2 
+    @apply text-base lg:text-xl font-semibold lg:mb-2 
 }
 .infoContainer h4
 {
-    @apply text-base lg:text-lg font-medium
+    @apply text-sm lg:text-lg font-medium
 }
  
 .infoContainer
 {
     @apply text-sm lg:text-base
+}
+.infoContainer p
+{
+    @apply text-sm sm:text-base
 }
 .socials
 {

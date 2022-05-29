@@ -4,12 +4,12 @@
 
  .contact
  {
-     @apply    px-20 py-20  mt-10
+     @apply  p-4   sm:p-14 md:p-20  mt-10
  }
  
  .contactInfo
  {
-     @apply   flex    rounded-2xl  overflow-clip
+     @apply   flex flex-col sm:flex-row   rounded-2xl  overflow-clip
  }
 
  .backDrop

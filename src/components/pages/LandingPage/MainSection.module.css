@@ -31,7 +31,7 @@
 
 .landingLogo
 {
-    @apply   hidden md:inline sm:w-1/2 md:w-1/2
+    @apply    -ml-10 md:-ml-0 md:inline sm:w-1/2 md:w-1/2
 }
 
  

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = (props) => {
   return (
-    <main>
+    <main className={classes.about}>
       <Driven />
       <motion.div
         className={classes.mission}

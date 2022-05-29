@@ -5,7 +5,7 @@
 
 .testimony
 {
-    @apply mt-48    
+    @apply mt-48    flex flex-col gap-8
 }
 
 .intro{
@@ -17,9 +17,25 @@
 }
 .intro p
 {
-    @apply text-gray-600 
+    @apply text-gray-600  
 } 
 .testimonies
 {
-    @apply mt-16 flex flex-row justify-center gap-8  p-8 
+    @apply mt-16 flex  justify-center gap-8  p-8 overflow-x-auto w-full
 }
+
+ .testimonies::-webkit-scrollbar{
+    display: none;
+}
+
+.testimonies{
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+ 
+
+/* .testimonyContainer
+{
+    @apply flex gap-8   w-full overflow-x-auto py-8
+}   */
