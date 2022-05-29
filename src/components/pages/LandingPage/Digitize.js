@@ -107,8 +107,7 @@ const Digitize = () => {
           {inView && (
             <div>
               <div className=" flex flex-col gap-2">
-                <CountUp start={0} end={200} delay={0} duration={2} onEnd={() => console.log('Ended! 👏')}
-  onStart={() => console.log('Started! 💨')}>
+                <CountUp start={0} end={200} delay={0} duration={2} >
                   {({ countUpRef }) => <p ref={countUpRef} />}
                 </CountUp>
                 {/* <br /> */}
