@@ -21,7 +21,7 @@
 }
 .card
 {
-    @apply  items-center sm:flex-row  flex flex-col flex-wrap md:flex-row  md:items-start gap-4 w-full justify-center
+    @apply  items-center px-4 overflow-x-auto flex flex-col md:items-start gap-4 w-full md:justify-center
 }
 
 .className
