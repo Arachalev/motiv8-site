@@ -20,7 +20,7 @@
 
 .future
 {
-    @apply text-center px-6  py-12 lg:px-0 lg:pl-12 lg:w-1/2 lg:text-left 
+    @apply text-center px-12 md:px-6  py-12 lg:px-0 lg:pl-12 lg:w-1/2 lg:text-left 
 }
 .future h4
 {

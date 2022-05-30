@@ -48,7 +48,7 @@
 
  .footerTab
  {
-     @apply flex flex-col mb-8 md:flex-row sm:gap-12 md:gap-4 lg:gap-8   xl:gap-14 
+     @apply flex flex-col self-start pl-4 md:pl-0 md:self-auto mb-8 md:flex-row sm:gap-12 md:gap-4 lg:gap-8   xl:gap-14 
  }
 
  .copyright

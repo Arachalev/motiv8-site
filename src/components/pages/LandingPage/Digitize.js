@@ -1,14 +1,22 @@
 import classes from "./Digitize.module.css";
 import digitize from "../../../assets/images/digitize.jpg";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { GiCheckMark } from "react-icons/gi";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, animate } from "framer-motion";
 import CountUp from "react-countup";
 
 const Digitize = () => {
   const { inView, ref } = useInView();
-  // const statsAnimation = useAnimation();
+  const control = useAnimation();
+
+  useEffect(()=>{
+      if(inView)
+      {
+        control.start("show")
+      }
+  },[control, inView])
+
   // if (inView) {
   //   statsAnimation.start({
   //     y: 0,
@@ -27,7 +35,9 @@ const Digitize = () => {
        
       transition: {
         delayChildren: 1,
-        duration:1.5
+        duration:1.5,
+        repeat:0,
+        repeatType:"reverse"
       }
     }
   }
@@ -48,12 +58,11 @@ const Digitize = () => {
     <Fragment>
       <motion.section
         className={classes.section}
-        // initial={{ opacity: 0, y: 200 }}
-        // whileInView={{ opacity: 1, y: 0 }}
-        // transition={{ duration: 1.5  }}
         variants={container}
-        initial="hidden"
-        whileInView="show"
+        initial="hidden"        
+        animate={control}
+        ref={ref}
+        
       >
         <div className={classes.digitize}>
           <div className={classes.client}>

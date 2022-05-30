@@ -5,7 +5,7 @@
 
 .testimony
 {
-    @apply mt-48    flex flex-col gap-8
+    @apply mt-48  w-[80vw] mx-auto   flex flex-col gap-8
 }
 
 .intro{
