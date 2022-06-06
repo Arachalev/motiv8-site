@@ -26,7 +26,7 @@ const Projects = () => {
       />
       <SingleProject
         title=" Essay Grading Software"
-        text="An AI Software used by the Engineering body COREN to automatically grade essays."
+        text="An AI Software used by the Engineering body COREN."
         image={news2}
         linksText="Read More"
         links={links}
@@ -40,7 +40,7 @@ const Projects = () => {
       />
       <SingleProject
         title=" Essay Software"
-        text="An AI Software used by the Engineering body COREN to automatically grade essays ."
+        text="An AI Software used by the Engineering body COREN."
         image={news2}
         linksText="Read More"
         links={links}

@@ -9,6 +9,7 @@ import AboutUs from "./components/pages/AboutUs/AboutUs";
 import Blog from "./components/pages/Blog/Blog"
 import Portfolio from "./components/pages/Portfolio/Portfolio"
 import Contact from "./components/pages/GetInTouch/Contact"
+import Test from "./components/UI/Test"
 
 
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="the_team" />
           <Route path="portfolio" element={<Portfolio/>} />
           <Route path="blog" element={<Blog/>} />
+          <Route path="test" element={<Test/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

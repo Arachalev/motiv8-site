@@ -7,14 +7,15 @@ import Logo from "../../assets/images/motiv8-logo.png";
 import { Link } from "react-router-dom";
 import HeaderVector from "../../assets/images/HeaderVector.js";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Nav from "./Nav";
 
 const Header = (props) => {
   const [isModal, setIsModal] = useState(false);
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
-  const contactUs = ()=>{
-    navigate("/motiv8/contact_us")
-  }
+  const contactUs = () => {
+    navigate("/motiv8/contact_us");
+  };
 
   // const teamHandler = ()=>
   // {
@@ -27,7 +28,6 @@ const Header = (props) => {
 
   if (isModal) {
     menu = menu;
-
   }
   // else if (styleArray[0] === "hidden") {
   //   return;
@@ -35,17 +35,16 @@ const Header = (props) => {
   else {
     styleArray.splice(0, 4, "hidden");
     menu = styleArray.join(" ");
-
   }
 
   const burgerHandler = (e) => {
     e.preventDefault();
     setIsModal(!isModal);
   };
- const change = e =>{
-   e.preventDefault();
-    setIsModal(!isModal) 
- }
+  const change = (e) => {
+    e.preventDefault();
+    setIsModal(!isModal);
+  };
 
   return (
     <Fragment>
@@ -67,13 +66,17 @@ const Header = (props) => {
 </svg> */}
 
         <div className="z-30">
-          <Link to="/motiv8/home " > <div className={classes.logo}>
-            <img alt="logo" src={Logo} />
-          </div> </Link>
-          
+          <Link to="/motiv8/home ">
+  
+            <div className={classes.logo}>
+              <img alt="logo" src={Logo} />
+            </div> 
+          </Link>
         </div>
         <div className={classes.links}>
-          <div className={classes.hamburger}>
+          <Nav />
+
+          {/* <div className={classes.hamburger}>
             <GiHamburgerMenu
               id="burger"
               onClick={burgerHandler}
@@ -92,7 +95,7 @@ const Header = (props) => {
             
             <li>
               <Link to="/motiv8/about_us#the_team"  >The Team</Link>
-              {/* onClick={teamHandler} */}
+              {/* onClick={teamHandler} ****************************************************************************************missing closing comment
             </li>
             <li>
               <Link to="blog">Blog</Link>
@@ -105,8 +108,7 @@ const Header = (props) => {
             </li>
           </ul>
 
-          </div>
-         
+          </div> */}
         </div>
       </header>
     </Fragment>
