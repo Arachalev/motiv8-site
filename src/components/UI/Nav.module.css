@@ -1,6 +1,6 @@
 #contact 
 {
-    @apply text-white bg-blue-700 rounded-full px-6 cursor-pointer hover:bg-blue-500 hover:scale-110 transition ease-linear
+    @apply text-white bg-blue-700 rounded-full px-6 py-2 cursor-pointer hover:bg-blue-500 hover:scale-110 transition ease-linear
 }
 
 .links
