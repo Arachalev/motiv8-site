@@ -21,7 +21,7 @@
 }
 .card
 {
-    @apply  items-center px-4 overflow-x-auto flex flex-col md:flex-row md:items-start gap-4 w-full md:justify-center
+    @apply  items-center px-4 pb-8 overflow-x-auto flex flex-col md:flex-row md:items-start gap-4 w-full md:justify-center
 }
 
  
