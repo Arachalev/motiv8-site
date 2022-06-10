@@ -4,7 +4,7 @@
  
 .main
 {
-    @apply   px-8 flex flex-col md:flex-row  max-w-full 
+    @apply   px-8 flex flex-col md:flex-row md:justify-between max-w-full 
 }
 .landing 
 {
@@ -31,7 +31,7 @@
 
 .landingLogo
 {
-    @apply    -ml-10 md:-ml-0 md:inline sm:w-1/2 md:w-1/2
+    @apply    -ml-10 md:-ml-0 md:inline sm:w-1/2 md:w-fit
 }
 
  
